@@ -1,0 +1,16 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Dandelion",
+            "email": "dandelion@micropenis.com",
+            "phone": "1234567890"
+        },
+        {
+            "id": 2,
+            "name": "Daniel",
+            "email": "danielvgrinevich@gmail.com",
+            "phone": "3367820109"
+        }
+    ]
+}

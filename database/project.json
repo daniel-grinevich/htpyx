@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "slug": "htpyx",
+            "name": "HTpyX",
+            "description": "This light web framework is centered on a component-based approach to Python web development. This framework leverages HTMX to create responsive websites efficiently. It features an ORM, template engine, and well-structured routing with view classes. Uniquely, it utilizes a JSON-based database system for data storage, adopting a NoSQL approach to manage data dynamically. This design not only facilitates rapid development but also ensures scalability and flexibility in handling diverse web application needs.",
+            "stack": "Python, JavaScript, HTTP, JSON, Gunicorn, Raspberry Pi, HTMX, CSS",
+            "body": [
+                "This is for teting purposes"
+            ],
+            "image": [
+                "/static/img/component.svg"
+            ]
+        },
+        {
+            "id": 2,
+            "slug": "navi",
+            "name": "Navi Coffee",
+            "description": "This project involved the development of a fully automated coffee machine that streamlines the beverage ordering process through advanced QR code technology. Aimed at enhancing user experience in fast-paced environments, this coffee machine allows customers to select their beverage choice from a mobile app, which then generates a unique QR code for their order. Upon scanning the QR code at the machine, the system automatically retrieves the order details and precisely brews the selected coffee variant, delivering a perfectly tailored cup every time.",
+            "stack": "C#, ASP.NET, Eversys API, Azure, Raspberry Pi"
+        }
+    ]
+}

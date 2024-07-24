@@ -1,0 +1,45 @@
+{
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "88"
+  ],
+  "[python]": {
+    "editor.formatOnSave": true
+  },
+  "editor.formatOnSave": false,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "monosans.djlint",
+    "editor.formatOnSave": true
+  },
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+  "[hbs]": {
+    "editor.formatOnSave": false
+  },
+  "[mustache]": {
+    "editor.formatOnSave": false
+  },
+  "[jinja]": {
+    "editor.formatOnSave": false
+  },
+  "[jinja-html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "[nj]": {
+    "editor.formatOnSave": false
+  },
+  "[njk]": {
+    "editor.formatOnSave": false
+  },
+  "[nunjucks]": {
+    "editor.formatOnSave": false
+  },
+  "[twig]": {
+    "editor.formatOnSave": false
+  }
+}

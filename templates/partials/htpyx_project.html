@@ -1,0 +1,114 @@
+<h1 class="font-league">{name}</h1>
+<div class="project-intro">
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">Project Description</h6>
+        <p class="project-body-text">{description}</p>
+    </div>
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">View source code</h6>
+        <p class="project-body-text">GitHub Link</p>
+    </div>
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">Technologies Used</h6>
+        <p class="project-body-text">{stack}</p>
+    </div>
+</div>
+<div class="project-body font-now-reg">
+    <div class="project-section">
+        <h6 class="project-description-header">High-Level Architecture</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/archetecture.svg">
+            <p>
+                Developed as part of my personal exploration into web technologies, 
+                the HTpyX framework showcases a modular architecture designed to 
+                facilitate a deep understanding of web application development. It 
+                features a user-friendly server setup, adaptable routing mechanisms, 
+                and a dynamic template engine optimized for creating sophisticated UI 
+                designs through conditional rendering and variable interpolation. At its 
+                heart, HTpyX integrates a BaseView for consistent view management, a component 
+                system for crafting reusable UI elements, and a straightforward ORM that 
+                simplifies database interactions. The framework also includes middleware 
+                that enhances integration with HTMX, enabling efficient, partial page 
+                updates that enhance user experience without the need for full page reloads. 
+                As a showcase project in my portfolio, HTpyX reflects my commitment to learning 
+                and innovation in software development, demonstrating my ability to build 
+                scalable and secure web applications.
+            </p>
+        </div>
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">Database Management</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/dblayer.svg">
+            <p>
+                The BaseModel within HTpyX serves as a foundational class 
+                that provides essential ORM functionalities, such as CRUD 
+                operations and connection handling. This class is designed to 
+                be extended by any specific model within the application, allowing 
+                each model to customize its data_file variable. By overriding data_file, 
+                individual models can specify their own storage files, thus tailoring data 
+                management to their unique needs while still leveraging the core ORM capabilities 
+                provided by BaseModel.
+            </p>
+        </div>
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">Template Engine</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/templateengine.svg">
+            <p>The HTpyX template engine is a simple yet functional tool I developed 
+                to manage and render HTML templates for my personal projects. It uses 
+                template inheritance to allow for a clean and organized structure, where a 
+                base HTML template defines the common layout elements, and additional views 
+                can extend this base to introduce specific content and styling. This setup 
+                enables efficient content updates and modular design, making it easier to 
+                maintain and evolve my portfolio website. The engine incorporates essential 
+                features like loops, conditional rendering, and variable interpolation to 
+                handle dynamic content gracefully.
+            </p>
+        </div>
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">Component System</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/componentview.svg">
+            <p>
+                HTpyX framework features an innovative component 
+                system designed to enhance modularity and reusability 
+                across web applications. Centered around a robust BaseView 
+                class, this system allows developers to create distinct, 
+                reusable UI elements that can be easily integrated across 
+                different parts of an application. Each component is crafted to 
+                encapsulate specific functionality and presentation logic, which 
+                simplifies the development process by enabling developers to 
+                assemble applications like building blocks. This approach not 
+                only accelerates development time but also improves code 
+                maintainability and consistency. By leveraging this component system, 
+                HTpyX empowers developers to construct complex user interfaces that are 
+                both scalable and easy to manage, making it an ideal choice for projects 
+                that require flexible, dynamic web solutions.
+            </p>
+        </div>
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">HTMX Integration</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/htmx.svg">
+            <p>
+                In the HTpyX framework, HTMX integration plays a crucial role in 
+                streamlining interactive web experiences. Requests are intelligently 
+                managed through middleware that detects HTMX headers, enabling the 
+                framework to handle these requests distinctively. When an HTMX request is 
+                identified, the framework packages the necessary headers, data, and HTTP body, 
+                directing them to the BaseView’s dispatcher. This process routes the request to 
+                the appropriate reactive() function within the specified component. Here, dynamic 
+                interactions with the database occur, followed by targeted updates to the web 
+                page without necessitating a full refresh. This system allows for seamless 
+                partial template updates, significantly enhancing user interactions by reducing 
+                load times and improving responsiveness. HTpyX’s HTMX integration exemplifies 
+                modern web development practices, offering an efficient solution for developers 
+                aiming to deliver sophisticated, highly interactive web applications.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div id="card-container" class="card-container">
+    <div id="card" class="card">
+        <h2 class="font-league">Or leave your info</h2>
+        <form class="contact-form font-now-reg" action="/contact/" method="POST"
+            hx-post="/contact/" 
+            hx-target="#card"
+            hx-swap="innerHTML"
+            hx-headers='{"X-Component": "contactform"}'>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="card-2"></div>
+</div>

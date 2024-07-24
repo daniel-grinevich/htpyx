@@ -1,0 +1,81 @@
+<h1 class="font-league">{name}</h1>
+<div class="project-intro">
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">Project Description</h6>
+        <p class="project-body-text">{description}</p>
+    </div>
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">View source code</h6>
+        <p class="project-body-text">GitHub Link</p>
+    </div>
+    <div class="project-description font-now-reg">
+        <h6 class="project-description-header">Technologies Used</h6>
+        <p class="project-body-text">{stack}</p>
+    </div>
+</div>
+<div class="project-body font-now-reg">
+    <div class="project-section">
+        <h6 class="project-description-header">Project at a Glance</h6>
+        <img src="/static/images/navi_iterations.svg">
+        <img src="/static/images/navi_higharch.svg">
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">Order Service Flow</h6>
+        <div class="project-details-style-one">
+            <img src="/static/images/orderservice.svg">
+            <p>
+                The coffee ordering system starts with an iOS app where users 
+                can create, edit, view, and delete their coffee orders. Once the 
+                user finalizes their order in the cart and hits “submit order,” 
+                the details are sent asynchronously to a web API, which then stores the 
+                order in a database. The system waits for the user to scan a corresponding 
+                QR code at a Raspberry Pi station. Upon scanning, the Raspberry Pi verifies 
+                the order and triggers the coffee-making process by connecting to the 
+                Eversys coffee machine's API, which then brews the coffee according 
+                to the order specifications. This setup allows users to order and 
+                receive their coffee seamlessly with just a few taps and a QR code scan.
+            </p>
+        </div>
+    </div>
+    <div class="project-section">
+        <h6 class="project-description-header">Challenges Faced</h6>
+        <div class="project-details-style-two">
+            <div class="challenge">
+                <h6>Issues with order lifecycle</h6>
+                <p>
+                    We were experiencing issues where we would have an order placed, 
+                    the espresso machine would finish the coffee, but the syrup dispenser
+                    wouldn't stop dispensing because we had no way to to track the order other
+                    than ending a confirmation response from the eversys API. This is when we implemented
+                    a state variable that we could use to track the order's lifecycle. This also solved other
+                    issues like if two people ordered at the same time or once an order is placed that the order
+                    could be cancelled until the actual QR code scan. 
+                </p>
+            </div>
+            <div class="challenge">
+                <h6>Issues with order lifecycle</h6>
+                <p>
+                    We were experiencing issues where we would have an order placed, 
+                    the espresso machine would finish the coffee, but the syrup dispenser
+                    wouldn't stop dispensing because we had no way to to track the order other
+                    than ending a confirmation response from the eversys API. This is when we implemented
+                    a state variable that we could use to track the order's lifecycle. This also solved other
+                    issues like if two people ordered at the same time or once an order is placed that the order
+                    could be cancelled until the actual QR code scan. 
+                </p>
+            </div>
+            <div class="challenge">
+                <h6>Issues with order lifecycle</h6>
+                <p>
+                    We were experiencing issues where we would have an order placed, 
+                    the espresso machine would finish the coffee, but the syrup dispenser
+                    wouldn't stop dispensing because we had no way to to track the order other
+                    than ending a confirmation response from the eversys API. This is when we implemented
+                    a state variable that we could use to track the order's lifecycle. This also solved other
+                    issues like if two people ordered at the same time or once an order is placed that the order
+                    could be cancelled until the actual QR code scan. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

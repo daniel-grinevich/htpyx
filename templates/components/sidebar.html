@@ -1,0 +1,74 @@
+<div>
+    <h1 class="font-league color-black">My Work</h1>
+    <div id="project-list" class="project-list font-now-reg">
+        <a id="htpyx-link" class="project-link" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#project-info" hx-trigger="click" hx-vals="js:{myVals:getProjectData('htpyx')}" onclick="animateCanvas(event)">
+
+            <div id="htpyx" class="project-item" data-title="HTpyX" data-color="0.42" data-color-x="#14D88A" data-color-y="#1FBEC0">
+                <div>
+                    <p>01</p>
+                </div>
+                <div class="span-wrap">
+                    <span>H</span><span>T</span><span>p</span><span>y</span><span>X</span>
+                    <span>W</span><span>e</span><span>b</span>
+                    <span>F</span><span>r</span><span>a</span><span>m</span><span>e</span><span>w</span><span>o</span><span>r</span><span>k</span>
+                </div>
+            </div>
+        </a>
+        <a id="navi-link" class="project-link" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#project-info" hx-trigger="click" hx-vals="js:{myVals:getProjectData('navi')}" onclick="animateCanvas(event)">
+            <div id="navicoffee" class="project-item" data-title="Navi Coffee" data-color="0.52">
+                <div>
+                    <p>02</p>
+                </div>
+                <div class="span-wrap">
+                    <span>N</span><span>a</span><span>v</span><span>i</span>
+                    <span>C</span><span>o</span><span>f</span><span>f</span><span>e</span><span>e</span>
+                </div>
+            </div>
+        </a>
+        <a class="project-link">
+            <div id="stockbot" class="project-item" data-title="Stock Trading Bot" data-color="0.62">
+                <div>
+                    <p>03</p>
+                </div>
+                <div class="span-wrap">
+                    <span>S</span><span>t</span><span>o</span><span>c</span><span>k</span>
+                    <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+                    <span>B</span><span>o</span><span>t</span>
+                    <span>C</span><span>o</span><span>m</span><span>i</span><span>n</span><span>g</span>
+                    <span>S</span><span>o</span><span>o</span><span>n</span><span>!</span>
+                </div>
+            </div>
+        </a>
+        <a class="project-link">
+            <div id="barml" class="project-item" data-title="Bar Machine Learning" data-color="0.72">
+                <div>
+                    <p>04</p>
+                </div>
+                <div class="span-wrap">
+                    <span>M</span><span>a</span><span>c</span><span>h</span><span>i</span><span>n</span><span>e</span>
+                    <span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>i</span><span>n</span><span>g</span>
+                    <span>C</span><span>o</span><span>m</span><span>i</span><span>n</span><span>g</span>
+                    <span>S</span><span>o</span><span>o</span><span>n</span><span>!</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="sidebar-icon-container">
+        <div id="sidebar-icon">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="15" cy="15" r="15" fill="#1E1E1E"/>
+                <path d="M14.04 18.2425V15.2725C14.04 11.965 17.3025 13.27 17.3025 10.3C17.3025 8.8825 16.2225 7.8475 14.67 7.8475C13.23 7.8475 12.15 8.8825 12.0825 10.2775H10.8225C10.8675 8.185 12.4875 6.6325 14.67 6.6325C16.92 6.6325 18.54 8.185 18.54 10.3C18.54 13.7875 15.3225 13.0225 15.3225 15.115V18.2425H14.04ZM14.76 22.18C14.22 22.18 13.77 21.7525 13.77 21.2125C13.77 20.695 14.22 20.245 14.76 20.245C15.2775 20.245 15.7275 20.695 15.7275 21.2125C15.7275 21.7525 15.2775 22.18 14.76 22.18Z" fill="white"/>
+            </svg> 
+        </div>
+        <div id="popup-sidebar">
+            <p>
+                This sidebar component was injected into a view named  
+                HomeView. It extends the BaseClass which then can overwrite
+                its own data context, request handling, error handling,
+                and be rendered to the front end via a template engine. 
+                Code example below:
+            </p>
+            <img width="320px" src="/static/images/homeview.svg">
+        </div>
+    </div>
+</div>
