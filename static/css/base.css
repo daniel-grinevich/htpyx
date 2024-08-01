@@ -1,39 +1,23 @@
-@font-face {
-    font-family: 'Druk_Wide_Bold';
-    src: local('Druk_Wide_Bold'),
-         url('../fonts/Druk_Wide_Bold.ttf') format("truetype");
-}
-@font-face {
-    font-family: 'NowAlt-Medium';
-    src: local('NowAlt-Medium'),
-         url('../fonts/NowAlt-Medium.woff2') format("truetype");
-}
-@font-face {
-    font-family: 'NowAlt-Regular';
-    src: local('NowAlt-Regular'),
-         url('../fonts/NowAlt-Regular.otf') format("truetype");
-}
-@font-face {
-    font-family: 'LeagueGothic-Regular';
-    src: local('LeagueGothic-Regular'),
-         url('../fonts/LeagueGothic-Regular.otf') format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 
 :root {
     /* Font sizes with responsive clamping */
-    --fs-700: clamp(2.8rem, 4.5vw + .7rem, 5.2rem);
-    --fs-600: clamp(2.3rem, 3.6vw + .7rem, 4.2rem);
-    --fs-500: clamp(1.8rem, 3.2vw + .7rem, 3.3rem);
-    --fs-400: clamp(1.5rem, 2.7vw + .7rem, 2.5rem);
-    --fs-300: clamp(1.3rem, 2.3vw + .7rem, 2.2rem);
-    --fs-200: clamp(1rem, 1.8vw + .7rem, 1.6rem);
-    --fs-100: clamp(.7rem, 1.4vw + .7rem, 1.2rem);
+    /* Font sizes with responsive clamping */
+    --fs-700: clamp(3.2rem, 5vw + .7rem, 5.2rem);
+    --fs-600: clamp(2.8rem, 4.5vw + .7rem, 5.2rem);
+    --fs-500: clamp(2.3rem, 3.6vw + .7rem, 4.2rem);
+    --fs-400: clamp(1.8rem, 3.2vw + .7rem, 3.3rem);
+    --fs-300: clamp(1.5rem, 2.7vw + .7rem, 2.5rem);
+    --fs-200: clamp(1.3rem, 2.3vw + .7rem, 2.2rem);
+    --fs-100: clamp(1rem, 1.8vw + .7rem, 1.6rem);
 
     /* Font families */
-    --fs-druk-front: 'Druk_Wide_Bold', sans-serif;
-    --fs-now-med-font: 'NowAlt-Medium', sans-serif;
-    --fs-now-reg-font: 'NowAlt-Regular', sans-serif;
-    --fs-league-font: 'LeagueGothic-Regular', sans-serif;
+    --fs-roboto: 'Roboto', sans-serif; /* Add this line */
+    --fs-nunito: 'Nunito', sans-serif; /* Add this line */
+    --fs-vt323: 'VT323', sans-serif; /* Add this line */
 
     /* Line heights */
     --lh-xl: 5rem;
@@ -43,85 +27,51 @@
 
     /* Other styles */
     --standard-space: 6rem; /* Assuming a typo in your original CSS */
-    --fs-orange: #FB762E;
     --fs-black: #1E1E1E;
-    --primary-color: #333;  /* Default primary color, adjust as needed */
-    --secondary-color: #555; /* Secondary color, adjust as needed */
-}
-html {
-    font-size: 62.5%;
+    --fs-red: #FD4324;
+    --fs-pink: #FFEFFD;
+
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFF;
-    
-}
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+    background-color: #F7F7F7;
 }
 
-h1 {
-    font-size: var(--fs-700);
-}
-
-h2 {
-    font-size: var(--fs-600);
-}
-
-h3 {
-    font-size: var(--fs-500);
-}
-
-h4 {
-    font-size: var(--fs-400);
-}
-
-h5 {
-    font-size: var(--fs-300);
-}
-
-h6 {
-    font-size: var(--fs-200);
-}
-
-p {
-    font-size: var(--fs-100);
-}
-a {
-    text-decoration: none; 
-}
 .no-whitespace {
     white-space: nowrap;
 }
-.font-druk {
-    font-family: var(--fs-druk-front);
+.font-roboto {
+    font-family: var(--fs-roboto);
 }
-.font-now-reg {
-    font-family: var(--fs-now-reg-font);
+.font-nunito {
+    font-family: var(--fs-nunito);
 }
-.font-now-med {
-    font-family: var(--fs-now-med-font);
-}
-.font-league {
-    font-family: var(--fs-league-font);
+.font-vt {
+    font-family: var(--fs-vt323), monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 .bg-black {
     background-color: var(--fs-black);
 }
 .color-black {
-    color: var(--fs-black)
+    color: var(--fs-black);
 }
-.bg-orange {
-    background-color: var(--fs-orange);
+.bg-custom-red {
+    background-color: var(--fs-red);
 }
-.color-orange {
-    color: var(--fs-orange);
+.bg-custom-pink {
+    background-color: var(--fs-pink);
+}
+
+#nav {
+    background-color: #F7F7F7;
 }
 
 .grid-main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     height: 100vh;
     overflow: hidden;
 }
@@ -135,23 +85,6 @@ a {
     width: calc(100% - 2rem); /* account for margin */
     margin: 1rem;
     overflow: hidden; /* Ensures no spillover */
-}
-canvas {
-    position: absolute;
-    top: 0;
-    left: 50%; /* center horizontally */
-    width: calc(100% - 4rem); /* reduce width, 2rem on each side */
-    height: calc(100% - 4rem); /* reduce height, 2rem on each side */
-    transform: translateX(-50%); /* shift it back by half its width to center it */
-    border: none;
-    border-radius: 3rem;
-    /* border: none;
-  border-radius: 1rem;
-  left: 0;
-  width: 100px;
-  height: 100px; */
-
-
 }
 .myworks-content {
     border-left: 1px solid var(--fs-black);
@@ -181,6 +114,7 @@ canvas {
     padding-right: 3rem;
     font-size: var(--fs-300);
     height: 100%;
+    border-bottom: 1px solid var(--fs-black);
 }
 
 @keyframes colorChangeProject1 {
@@ -189,11 +123,11 @@ canvas {
         transform: scale(1);
     }
     50% {
-        color: #00ff99; /* Intermediate color */
+        color:black; /* Intermediate color */
         transform: scale(1.5);
     }
     100% {
-        color: #1FBEC0; /* End color */
+        color: var(--fs-black); /* E color */
         transform: scale(1);
     }
 }
@@ -426,3 +360,63 @@ canvas {
     border: 0;
     padding: 1rem;
 }
+
+#banner-left {
+    bottom: 0px;
+    left: 0;
+    width: calc(100vw - 71px);
+    transform: rotate(-90deg)   
+    translateY(100%);
+    transform-origin: left bottom;
+    z-index: 3;
+    background-color: inherit;
+    position: absolute;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFEFFD!important;
+    height: 40px;
+    font-size: 1.6rem;
+}
+#js-marquee-wrapper {
+    width: 100000px;
+    display: flex;
+}
+.marquee-default {
+    background-color: #FFEFFD!important;
+    height: 40px;
+    font-size: 1.6rem;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.purple-code { color: #c678dd; }  /* 'def' and other keywords */
+.blue-code { color: #56b6c2; }   /* Function names, return, if, else, etc. */
+.green-code { color: #98c379; }  /* String literals */
+.red-code { color: #e06c75; }    /* 'self' keyword */
+.orange-code { color: #d19a66; } /* Special methods or important variables */
+
+@keyframes fill_out_box {
+    0% {
+        width: 5px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.fill_out_box {
+    animation: fill_out_box .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.bg-build-white {
+    background-image: url('/static/images/build-white.svg');
+    background-position: center 0;
+    background-size: 56px 56px;
+}
+#pixel-layout {
+    grid-template-columns: repeat(18, 28px);
+    grid-template-rows: repeat(18, 28px);
+}
+

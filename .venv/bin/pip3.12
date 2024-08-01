@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/Dandelion/Library/Mobile Documents/com~apple~CloudDocs/Documents/devdan 2/micropenis/.venv/bin/python3.12" "$0" "$@"
+'''exec' "/Users/Dandelion/Library/Mobile Documents/com~apple~CloudDocs/Documents/devdan 2/htpyx/.venv/bin/python3.12" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

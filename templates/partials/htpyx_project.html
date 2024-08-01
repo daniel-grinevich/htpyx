@@ -1,114 +1,316 @@
-<h1 class="font-league">{name}</h1>
-<div class="project-intro">
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">Project Description</h6>
-        <p class="project-body-text">{description}</p>
+<div class="w-full border-b border-black marquee-default">
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="border border-black p-4 relative">
+        <h1 class="font-roboto text-3xl md:text-4xl lg:text-5xl sm:text-lg">{name}</h1>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Project Description</h6>
+        <p class="font-nunito text-md">{description}</p>
+        <div class="absolute bg-custom-red px-1 border border-black" style="top: -15px; left: -30px; text-md">
+            Header 1
+        </div>
     </div>
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">View source code</h6>
-        <p class="project-body-text">GitHub Link</p>
+    <div class="font-roboto bg-custom-red block border border-black p-4 mt-4 text-center">
+        Important Information Goes Here
     </div>
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">Technologies Used</h6>
-        <p class="project-body-text">{stack}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
+        <div>
+            <h6 class="font-roboto text-xl mt-4 mb-2 border-b border-black">Project Goal</h6>
+            <p class="font-nunito text-md">{goal}</p>
+        </div>
+        <div>
+            <h6 class="font-roboto text-xl mt-4 mb-2 border-b border-black">Technologies Used</h6>
+            <p class="font-nunito text-md">{stack}</p>
+        </div>
+    </div>
+    <div class="flex flex-col items-center justify-center py-8">   
+        <a id="githubLink" href="{github}" class="border border-black text-black px-4 py-2 inline-block hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black active:bg-gray-300" style="margin-top: -2px; text-align: center;">
+            <span class="font-nunito text-md">View source code</span> <!-- Consistent font usage -->
+        </a>
+        <div class="font-nunito">
+            content
+        </div>
     </div>
 </div>
-<div class="project-body font-now-reg">
-    <div class="project-section">
-        <h6 class="project-description-header">High-Level Architecture</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/archetecture.svg">
-            <p>
-                Developed as part of my personal exploration into web technologies, 
-                the HTpyX framework showcases a modular architecture designed to 
-                facilitate a deep understanding of web application development. It 
-                features a user-friendly server setup, adaptable routing mechanisms, 
-                and a dynamic template engine optimized for creating sophisticated UI 
-                designs through conditional rendering and variable interpolation. At its 
-                heart, HTpyX integrates a BaseView for consistent view management, a component 
-                system for crafting reusable UI elements, and a straightforward ORM that 
-                simplifies database interactions. The framework also includes middleware 
-                that enhances integration with HTMX, enabling efficient, partial page 
-                updates that enhance user experience without the need for full page reloads. 
-                As a showcase project in my portfolio, HTpyX reflects my commitment to learning 
-                and innovation in software development, demonstrating my ability to build 
-                scalable and secure web applications.
-            </p>
+<div class="w-full border-t border-b border-black p-4 relative flex justify-center bg-custom-pink">
+    <h1 class="font-vt text-3xl md:text-4xl lg:text-5xl sm:text-lg">Keep Scrolling</h1>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">High Level Architecture</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 1
         </div>
     </div>
-    <div class="project-section">
-        <h6 class="project-description-header">Database Management</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/dblayer.svg">
-            <p>
-                The BaseModel within HTpyX serves as a foundational class 
-                that provides essential ORM functionalities, such as CRUD 
-                operations and connection handling. This class is designed to 
-                be extended by any specific model within the application, allowing 
-                each model to customize its data_file variable. By overriding data_file, 
-                individual models can specify their own storage files, thus tailoring data 
-                management to their unique needs while still leveraging the core ORM capabilities 
-                provided by BaseModel.
-            </p>
+    <div class="w-full relative justify-center sm:hidden md:flex">
+        <canvas id="myArchitecture"  width="500" height="500" style="border: 1px solid black;">
+        </canvas>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 right-0">
+            Drag & Drop!
         </div>
     </div>
-    <div class="project-section">
-        <h6 class="project-description-header">Template Engine</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/templateengine.svg">
-            <p>The HTpyX template engine is a simple yet functional tool I developed 
-                to manage and render HTML templates for my personal projects. It uses 
-                template inheritance to allow for a clean and organized structure, where a 
-                base HTML template defines the common layout elements, and additional views 
-                can extend this base to introduce specific content and styling. This setup 
-                enables efficient content updates and modular design, making it easier to 
-                maintain and evolve my portfolio website. The engine incorporates essential 
-                features like loops, conditional rendering, and variable interpolation to 
-                handle dynamic content gracefully.
-            </p>
+    <div class="p-4  my-4 relative">
+        <p class="font-nunito text-md">
+            As you might have noticed, the architecture of HTpyX is similar to Django. 
+            This was intentionally done because I wanted to create a lightweight web framework that followed 
+            the same design patterns as Django allowing for skills to be easily transfered from one to the other. 
+            With that being said what makes HTpyX stand on its own is the fact that its super lightweight and 
+            uses class inheritance to not ony create resuable views but components that can respond to HTMX request.
+            This makes the framework feel like a single page application. All this funcitnality is achieved by 
+            extending the BaseView and BaseComponent and overriding the methods that you want to customize.
+        </p> 
+    </div>
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">Building the view layer</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 2
+        </div>
+        <p class="font-nunito text-md py-2">
+            One of the essentials of any web framework is the view layer. The view layer is where you define 
+            the endpoints that your application will respond to. In HTpyX, the view layer is implementing 
+            by extending the BaseView class. Lets take a look at the core methods that the BaseView class has. 
+        </p>
+    </div>
+</div>
+<div class="max-w-4xl mx-4 lg:mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] border border-black">
+    <!-- Left Column -->
+    <div class="grid grid-cols-2 lg:grid-cols-1 lg:auto-rows-fr">
+        <div id="dispatch" data-value="selected" class="flex justify-center items-center relative p-2 border-r border-b border-black">
+            <div class="absolute bg-custom-red h-full w-full left-0 top-0"></div>
+            <span class="z-10 relative">Dispatch</span>
+        </div>
+        <div id="get" data-value="not-selected" class="flex justify-center items-center relative p-2 lg:border-r border-b border-black">
+            <div class="absolute bg-custom-red h-full w-1 left-0 top-0"></div>
+            <span class="z-10 relative">Get</span>
+        </div>
+        <div id="render" data-value="not-selected" class="flex justify-center items-center relative p-2 border-r border-b border-black">
+            <div class="absolute bg-custom-red h-full w-1 left-0 top-0"></div>
+            <span class="z-10 relative">Render</span>
+        </div>
+        <div id="reactive" data-value="not-selected" class="flex justify-center items-center relative p-2 lg:border-r border-b lg:border-b-0 border-black">
+            <div class="absolute bg-custom-red h-full w-1 left-0 top-0"></div>
+            <span class="z-10 relative">Reactive</span>
         </div>
     </div>
-    <div class="project-section">
-        <h6 class="project-description-header">Component System</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/componentview.svg">
-            <p>
-                HTpyX framework features an innovative component 
-                system designed to enhance modularity and reusability 
-                across web applications. Centered around a robust BaseView 
-                class, this system allows developers to create distinct, 
-                reusable UI elements that can be easily integrated across 
-                different parts of an application. Each component is crafted to 
-                encapsulate specific functionality and presentation logic, which 
-                simplifies the development process by enabling developers to 
-                assemble applications like building blocks. This approach not 
-                only accelerates development time but also improves code 
-                maintainability and consistency. By leveraging this component system, 
-                HTpyX empowers developers to construct complex user interfaces that are 
-                both scalable and easy to manage, making it an ideal choice for projects 
-                that require flexible, dynamic web solutions.
-            </p>
+    <div class="flex justify-center items-center p-4">
+        <div class="flex flex-col justify-center p-4">
+            <div class="flex flex-col rounded-xl h-80 text-white bg-black">
+                <div class="flex h-10 rounded-t-xl bg-gray-700 flex-row px-2 items-center justify-between">
+                    <svg width="60" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="5" fill="#EA3737"></circle>
+                        <circle cx="30" cy="10" r="5" fill="#FFB200"></circle>
+                        <circle cx="50" cy="10" r="5" fill="#00BE43"></circle>
+                    </svg>
+                    <div>
+                        <h6 class="font-roboto text-sm">Project/HTpyX/BaseView</h6>
+                    </div>
+                </div>
+                <div class="p-1 flex flex-col justify-start overflow-scroll bg-black rounded-b-xl">
+                    <code id="terminal" class="font-mono text-sm text-white p-1">
+                        <div><span class="purple-code">def</span> <span class="blue-code">dispatch</span>(<span class="red-code">self</span>, request):</div>
+                        <div style="padding-left: 20px;">htmx = <span class="blue-code">getattr</span>(request, <span class="green-code">"HTTP_HX_REQUEST"</span>, None)</div>
+                        <div style="padding-left: 20px;">method = <span class="blue-code">getattr</span>(request, <span class="green-code">"REQUEST_METHOD"</span>, None)</div>
+                        <div style="padding-left: 20px;"><span class="purple-code">if</span> <span class="blue-code">hasattr</span>(<span class="red-code">self</span>, method.lower()):</div>
+                        <div style="padding-left: 40px;"><span class="purple-code">if</span> htmx:</div>
+                        <div style="padding-left: 60px;">handler = <span class="blue-code">getattr</span>(<span class="red-code">self</span>, <span class="orange-code">"reactive"</span>)</div>
+                        <div style="padding-left: 60px;">component = <span class="blue-code">getattr</span>(request, <span class="green-code">"HTTP_X_COMPONENT"</span>)</div>
+                        <div style="padding-left: 60px;"><span class="purple-code">return</span> handler(request, component)</div>
+                        <div style="padding-left: 40px;"><span class="purple-code">else</span>:</div>
+                        <div style="padding-left: 60px;">handler = <span class="blue-code">getattr</span>(<span class="red-code">self</span>, method.lower())</div>
+                        <div style="padding-left: 60px;"><span class="purple-code">return</span> handler()</div>
+                        <div style="padding-left: 20px;"><span class="purple-code">elif</span> <span class="blue-code">hasattr</span>(super(), method.lower()):</div>
+                        <div style="padding-left: 40px;">handler = <span class="blue-code">getattr</span>(super(), method.lower())</div>
+                        <div style="padding-left: 40px;"><span class="purple-code">return</span> handler()</div>
+                        <div style="padding-left: 20px;"><span class="purple-code">else</span>:</div>
+                        <div style="padding-left: 40px;"><span class="purple-code">return</span> <span class="red-code">self</span>.<span class="orange-code">http_method_not_allowed</span>()</div>
+                    </code>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="project-section">
-        <h6 class="project-description-header">HTMX Integration</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/htmx.svg">
-            <p>
-                In the HTpyX framework, HTMX integration plays a crucial role in 
-                streamlining interactive web experiences. Requests are intelligently 
-                managed through middleware that detects HTMX headers, enabling the 
-                framework to handle these requests distinctively. When an HTMX request is 
-                identified, the framework packages the necessary headers, data, and HTTP body, 
-                directing them to the BaseView’s dispatcher. This process routes the request to 
-                the appropriate reactive() function within the specified component. Here, dynamic 
-                interactions with the database occur, followed by targeted updates to the web 
-                page without necessitating a full refresh. This system allows for seamless 
-                partial template updates, significantly enhancing user interactions by reducing 
-                load times and improving responsiveness. HTpyX’s HTMX integration exemplifies 
-                modern web development practices, offering an efficient solution for developers 
-                aiming to deliver sophisticated, highly interactive web applications.
-            </p>
-        </div>
+    <div class="relative col-span-1 lg:col-span-2 bg-gray-200 border-t border-black p-4">
+        <p id="code-description" class="font-nunito text-md">
+            The dispatch method is called when the view is accessed by the router. It looks 
+            for the method that matches the request method on the child view class. If there 
+            is no method then it will call the method on the parent (base) view class.
+        </p>
     </div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4  my-4 relative">
+        <p class="font-nunito text-md">
+            These are the core methods that make the view layer work. Just by extending the BaseView class and 
+            providing a html template, you can create a functional view with routing and HTMX support. Isn't that 
+            great? Each custom view now acts almost like its own BaseView. You can define a template or data that 
+            then can be used by all the components that are passed to the custom view. Lets look at the code that 
+            is making this websites homepage run. 
+        </p> 
+    </div>
+    <div class="p-4 my-4 bg-custom-pink shadow rounded-lg relative border border-black overflow-auto">
+        <pre class="text-sm text-black font-mono">
+            class HomeView(BaseView):
+                def __init__(self, request):
+                    super().__init__()
+                    self.request = request
+                    # Declare your components
+                    self.components = {
+                        "nav": NavComponent(name="nav_component"),
+                        "sidebar": SidebarComponent(name="sidebar_component"),
+                    }
+
+                # Overwrite any context data
+                def get_context_data(self):
+                    data = {"title": "Daniel Grinevich"}
+                    return data
+
+                # Define a template
+                def template(self):
+                    template_path = "homepage/index.html"
+                    return template_path
+        </pre>
+    </div>
+    <div class="p-4  my-4 relative">
+        <p class="font-nunito text-md">
+            Not a lot of code here, but a lot of functionality. You can see that you can override 
+            the get_context_data method to add data to the context that will be passed to the view. 
+            You can define a template that will be rendered. Most importantly you can define a list 
+            of components. 
+        </p> 
+    </div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">The Reactive Component System</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 3
+        </div>
+        <p class="font-nunito text-md py-2">
+            Now that we know how to create a custom view with components, lets look at how they respond to HMTX 
+            requests. Lets take a look at two examples. The first one will be the sidebar component that responds 
+            to a HTMX GET request for project data. The second will be a contact form component that responds to a 
+            POST request to save data to the JSON database. 
+        </p>
+    </div>
+    <div class="flex flex-col justify-center items-center relative">
+        <p>GET request</p>
+    </div>
+    <div class="p-4 my-4 bg-custom-pink shadow rounded-lg relative border border-black overflow-auto">
+        <pre class="text-sm text-black font-mono">
+        def reactive(self, request):
+            # We are going to have to specify if its a GET or POST we want to handle
+            if request.REQUEST_METHOD == "GET":
+
+                data = getattr(request, "htmx-data", None)
+
+                if data:
+                    project_name = data.get("project")
+                    project = Project()
+                    project_obj = project.find_one(lambda x: x["slug"] == project_name)
+
+                if project_name == "htpyx":
+                    template_path = "partials/htpyx_project.html"
+                elif project_name == "navi":
+                    template_path = "partials/navi_project.html"
+                else:
+                    template_path = None
+
+                return self.render(template=template_path, data=project_obj)
+        </pre>
+    </div>
+    <div class="flex flex-col justify-center items-center relative">
+        <p>POST request</p>
+    </div>
+    <div class="p-4 my-4 bg-custom-pink shadow rounded-lg relative border border-black overflow-auto">
+        <pre class="text-sm text-black font-mono">
+        def reactive(self, request):
+            if request.REQUEST_METHOD == "POST":
+                try:
+                    data = getattr(request, "htmx-data")
+                    name = data["name"][0]
+                    email = data["email"][0]
+                    phone = data["phone"][0]
+
+                    contact = Contact()
+                    contact.add({"name": name, "email": email, "phone": phone})
+
+                    template_path = "partials/success.html"
+                    return self.render(template=template_path)
+                except Exception as e:
+                    print(f"Error: {e}")
+                    template_path = "partials/error.html"
+                    return self.render(template=template_path)
+        </pre>
+    </div>
+    <p class="font-nunito text-md py-2">
+        So far this should look pretty standard. We are checking if the request method is a GET or POST and 
+        then checking the data that was passed in the request. If you recall from the dispatch method, we check 
+        the request method for a HTTP_HX_REQUEST attribute. If it is present then we know that this is an HTMX 
+        request and at that point its just simple mapping. But you might have noticed what is this htmx-data attribute. 
+        Well this is a special attribute that gets built with our custom HTMX middleware. So for instance in the POST 
+        example above, all the attributes submitted in the form will be included in the htmx-data attribute. 
+    </p>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">The ORM</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 4
+        </div>
+        <p class="font-nunito text-md py-2">
+            Now that we know how to create a custom view with components, lets look at how they respond to HMTX 
+            requests. Lets take a look at two examples. The first one will be the sidebar component that responds 
+            to a HTMX GET request for project data. The second will be a contact form component that responds to a 
+            POST request to save data to the JSON database. 
+        </p>
+    </div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">Template rending with the custom engine</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 5
+        </div>
+        <p class="font-nunito text-md py-2">
+            Now that we know how to create a custom view with components, lets look at how they respond to HMTX 
+            requests. Lets take a look at two examples. The first one will be the sidebar component that responds 
+            to a HTMX GET request for project data. The second will be a contact form component that responds to a 
+            POST request to save data to the JSON database. 
+        </p>
+    </div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">Improvements, Challeneges, and Refelction</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 6
+        </div>
+        <p class="font-nunito text-md py-2">
+            Now that we know how to create a custom view with components, lets look at how they respond to HMTX 
+            requests. Lets take a look at two examples. The first one will be the sidebar component that responds 
+            to a HTMX GET request for project data. The second will be a contact form component that responds to a 
+            POST request to save data to the JSON database. 
+        </p>
+    </div>
+</div>
+<div class="h-40">
 </div>

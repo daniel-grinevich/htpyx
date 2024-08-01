@@ -1,23 +1,69 @@
 {% block webpage %}
-    <div class="grid-main">
-        <div class="main-content">
+<div class="sm:block md:hidden lg:hidden xl:hidden">
+    <h1>Please resize your browser to see the full experience</h1>
+</div>
+<div class="hidden sm:hidden md:relative md:h-screen md:grid  md:grid-cols-[1fr_150px] lg:grid-cols-[1fr_250px] xl:grid-cols-[1fr_350px] md:grid-rows-[auto_1fr]">
+    <!-- Navbar across the top of the main content only -->
+    <div id="nav" class="col-start-1 col-span-1 p-4 border-b border-black z-10">
+        {% component nav %}
+    </div>
+
+    <!-- Sidebar that extends full height starting from the top to the bottom -->
+    <div class="col-start-2 row-span-2 border-l border-black overflow-auto">
+        <!-- Sidebar content or project list -->
+        {% component sidebar %}
+    </div>
+
+    <!-- Main content area below the navbar, beside the sidebar -->
+    <div id="mainContent" class="relative col-start-1 col-end-2 row-start-2 bg-white overflow-auto">
+        <!-- Your main content goes here -->
+       <div class="w-full h-full flex justify-center items-center">
             <div>
-                {% component nav %}
+                PICK A PROJECT TO GET STARTED . . . 
             </div>
-            <div class="main-display" id="mainDisplay">
-                <div id="project-info">
+       </div>
+    </div>
+    <div id="banner-left" class="sm:hidden md:hidden lg:hidden xl:block border-b border-black">
+        <div id="marquee-inner">
+            <div id="js-marquee-wrapper">
+                <div id="marquee-left">
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
                 </div>
-                <div class="main-icon">
-                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="15" cy="15" r="15" fill="#1E1E1E"/>
-                        <path d="M14.04 18.2425V15.2725C14.04 11.965 17.3025 13.27 17.3025 10.3C17.3025 8.8825 16.2225 7.8475 14.67 7.8475C13.23 7.8475 12.15 8.8825 12.0825 10.2775H10.8225C10.8675 8.185 12.4875 6.6325 14.67 6.6325C16.92 6.6325 18.54 8.185 18.54 10.3C18.54 13.7875 15.3225 13.0225 15.3225 15.115V18.2425H14.04ZM14.76 22.18C14.22 22.18 13.77 21.7525 13.77 21.2125C13.77 20.695 14.22 20.245 14.76 20.245C15.2775 20.245 15.7275 20.695 15.7275 21.2125C15.7275 21.7525 15.2775 22.18 14.76 22.18Z" fill="white"/>
-                    </svg> 
+                <div id="marquee-right">
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+                    <span class="font-vt text-sm inline-block mr-4">Margin</span>
                 </div>
             </div>
-            
-        </div>
-        <div class="myworks-content">
-            {% component sidebar %}
         </div>
     </div>
+</div>
+
 {% endblock webpage %}

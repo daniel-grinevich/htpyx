@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let isHovering = false;
     let currentLink = null;
 
-    const projectItems = document.querySelectorAll('.project-item');
+    const projectItems = document.querySelectorAll('[id^="projectItem-"]');
+    
 
     projectItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
@@ -11,22 +12,26 @@ document.addEventListener('DOMContentLoaded', function () {
                 removeHeader();
             }
 
-            isHovering = true;
             currentLink = item;
+            isHovering = true;
 
-            const title = item.getAttribute('data-title');
-            const color = parseFloat(item.getAttribute('data-color'));
-            const id = item.id;
+            const titleDiv = document.createElement('div');
+            titleDiv.id = 'animateLabel';  // Add class for styling
+            titleDiv.className = 'px-1 font-nunito border border-black';  // Add class for styling
+            titleDiv.style.backgroundColor = 'var(--fs-red)';  // Set the background color
+            titleDiv.textContent = 'Animating';  // Set text content
+
             console.log('Hovering over:', item);
-            animateDisplay(true, title, color);
-            animateLink(item, id); // Animate the link text
+            item.appendChild(titleDiv);
+            // item.appendChild(`<div class="project-title">Hi</div>`);
+            // animateDisplay(true, title, color);
+            animateLink(item, this.id); // Animate the link text
         });
 
         item.addEventListener('mouseleave', () => {
             isHovering = false;
-            removeAnimateLink(item);
-            removeHeader();
             currentLink = null;
+            this.querySelector('#animateLabel').remove();
         });
     });
 });
@@ -55,34 +60,30 @@ function animateDisplay(isHovering, text, seed) {
     }
 }
 
-function removeHeader() {
-    const existingHeader = document.querySelector('h4[id$="-header"]');
-    if (existingHeader) {
-        existingHeader.remove();
-    }
-}
+// function removeHeader() {
+//     const existingHeader = document.querySelector('h4[id$="-header"]');
+//     if (existingHeader) {
+//         existingHeader.remove();
+//     }
+// }
 
-function animateLink(item, id) {
-    const spans = item.querySelectorAll('.span-wrap span');
+function animateLink(item) {
+    const spanContainer = item.querySelectorAll('#spanWrap');
     let animationClass = '';
 
-    if (id === 'htpyx') {
-        animationClass = 'grow-and-color-change-project1';
-    } else if (id === 'navicoffee') {
-        animationClass = 'grow-and-color-change-project2';
-    } else if (id === 'stockbot') {
-        animationClass = 'grow-and-color-change-project3';
-    } else {
-        animationClass = 'grow-and-color-change-project4';
-    }
-
+    
+    animationClass = 'grow-and-color-change-project1';
+    console.log("This is the spans", spanContainer[0]);
+    spans = spanContainer[0].querySelectorAll('span');
     spans.forEach((span, index) => {
+        console.log("this is span", span);
         span.classList.remove(animationClass); // Reset the animation
         span.offsetHeight; // Trigger reflow
         span.style.animationDelay = `${index * 0.02}s`; // Adjust delay for faster animation
         span.classList.add(animationClass);
         console.log(span.classList);
     });
+    
 }
 
 function removeAnimateLink(item) {
@@ -170,3 +171,36 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    const githubLink = document.getElementById('githubLink');
+    console.log("GitHub link:", githubLink);
+
+    if (githubLink) {
+        console.log("GitHub link exists");
+        githubLink.addEventListener('mouseover', function(event) {
+            console.log("Hovering over GitHub link with id:", event.target.id);
+            // Your additional logic here if needed
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const marqueeLeft = document.getElementById('marquee-left');
+    const marqueeRight = document.getElementById('marquee-right');
+
+    let currentPosition = 0;
+    const speed = 2; // Speed of the marquee
+
+    function animateMarquee() {
+        currentPosition += speed;  // Move marquee upwards
+     
+        // marqueeLeft.style.transform = `translateX(${currentPosition}px)`;
+        // marqueeRight.style.transform = `translateX(${currentPosition}px)`;
+
+        requestAnimationFrame(animateMarquee);
+    }
+
+    animateMarquee();
+});

@@ -1,81 +1,257 @@
-<h1 class="font-league">{name}</h1>
-<div class="project-intro">
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">Project Description</h6>
-        <p class="project-body-text">{description}</p>
-    </div>
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">View source code</h6>
-        <p class="project-body-text">GitHub Link</p>
-    </div>
-    <div class="project-description font-now-reg">
-        <h6 class="project-description-header">Technologies Used</h6>
-        <p class="project-body-text">{stack}</p>
+<div class="w-full border-b border-black marquee-default">
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+    <span class="font-vt text-sm inline-block mr-4">Margin</span>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="border border-black p-4 relative">
+        <h1 class="font-roboto text-3xl md:text-4xl lg:text-5xl sm:text-lg">{name}</h1>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Project Description</h6>
+        <p class="font-nunito text-md">{description}</p>
+        <div class="absolute bg-custom-red px-1 border border-black" style="top: -15px; left: -30px; text-md">
+            Header 1
+        </div>
     </div>
 </div>
-<div class="project-body font-now-reg">
-    <div class="project-section">
-        <h6 class="project-description-header">Project at a Glance</h6>
-        <img src="/static/images/navi_iterations.svg">
-        <img src="/static/images/navi_higharch.svg">
-    </div>
-    <div class="project-section">
-        <h6 class="project-description-header">Order Service Flow</h6>
-        <div class="project-details-style-one">
-            <img src="/static/images/orderservice.svg">
-            <p>
-                The coffee ordering system starts with an iOS app where users 
-                can create, edit, view, and delete their coffee orders. Once the 
-                user finalizes their order in the cart and hits “submit order,” 
-                the details are sent asynchronously to a web API, which then stores the 
-                order in a database. The system waits for the user to scan a corresponding 
-                QR code at a Raspberry Pi station. Upon scanning, the Raspberry Pi verifies 
-                the order and triggers the coffee-making process by connecting to the 
-                Eversys coffee machine's API, which then brews the coffee according 
-                to the order specifications. This setup allows users to order and 
-                receive their coffee seamlessly with just a few taps and a QR code scan.
-            </p>
+<div class="grid grid-cols-[3.5rem_minmax(0,1fr)_3.5rem] bg-zinc-700 text-white">
+    <div class="border-t border-b border-black"></div>
+    <div class="col-start-2 col-end-3 border border-black">     
+        <div class="p-4 flex flex-col items-center justify-center">
+            <h1 class="text-nunito">Important Information Goes Here!</h1>
         </div>
     </div>
-    <div class="project-section">
-        <h6 class="project-description-header">Challenges Faced</h6>
-        <div class="project-details-style-two">
-            <div class="challenge">
-                <h6>Issues with order lifecycle</h6>
-                <p>
-                    We were experiencing issues where we would have an order placed, 
-                    the espresso machine would finish the coffee, but the syrup dispenser
-                    wouldn't stop dispensing because we had no way to to track the order other
-                    than ending a confirmation response from the eversys API. This is when we implemented
-                    a state variable that we could use to track the order's lifecycle. This also solved other
-                    issues like if two people ordered at the same time or once an order is placed that the order
-                    could be cancelled until the actual QR code scan. 
-                </p>
+    <div class="border-t border-b border-black"></div>
+</div>
+<div class="grid grid-cols-[3.5rem_minmax(0,1fr)_3.5rem]">
+    <div class="bg-zinc-700"></div>
+    <div class="col-start-2 col-end-3 border-l border-r border-black bg-zinc-100">
+        <div class="bg-build-white col-build-2 relative flex justify-center items-center px-1 ">
+            <div id="pixel-layout" class="grid">
             </div>
-            <div class="challenge">
-                <h6>Issues with order lifecycle</h6>
-                <p>
-                    We were experiencing issues where we would have an order placed, 
-                    the espresso machine would finish the coffee, but the syrup dispenser
-                    wouldn't stop dispensing because we had no way to to track the order other
-                    than ending a confirmation response from the eversys API. This is when we implemented
-                    a state variable that we could use to track the order's lifecycle. This also solved other
-                    issues like if two people ordered at the same time or once an order is placed that the order
-                    could be cancelled until the actual QR code scan. 
-                </p>
-            </div>
-            <div class="challenge">
-                <h6>Issues with order lifecycle</h6>
-                <p>
-                    We were experiencing issues where we would have an order placed, 
-                    the espresso machine would finish the coffee, but the syrup dispenser
-                    wouldn't stop dispensing because we had no way to to track the order other
-                    than ending a confirmation response from the eversys API. This is when we implemented
-                    a state variable that we could use to track the order's lifecycle. This also solved other
-                    issues like if two people ordered at the same time or once an order is placed that the order
-                    could be cancelled until the actual QR code scan. 
-                </p>
+            <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+                <img id="prototype-image"  src="/static/images/concept.svg" class="centered-image" style="width: 300px; height: 300px;">
             </div>
         </div>
     </div>
+    <div class="bg-zinc-700"></div>
+</div>
+<div class="grid grid-cols-[3.5rem_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_3.5rem] bg-zinc-700 text-white">
+    <div class="border-t border-black"></div>
+    <div class="col-start-2 col-end-3 border border-b-0 border-black">     
+        <div id="concept" data-value="selected" class="p-4 flex flex-col items-center justify-center bg-custom-red">
+            <span class="text-nunito">Concept</span>
+        </div>
+    </div>
+    <div class="col-start-3 col-end-4 border border-b-0  border-l-0 border-black">     
+        <div id="cad-designed" data-value="not-selected" class="p-4 flex flex-col items-center justify-center">
+            <span class="text-nunito">CAD Designed</span>
+        </div>
+    </div>
+    <div class="col-start-4 col-end-5 border border-l-0 border-b-0 border-black">     
+        <div id="prototype" data-value="not-selected" class="p-4 flex flex-col items-center justify-center">
+            <span class="text-nunito">Prototype</span>
+        </div>
+    </div>
+    <div class="col-start-5 col-end-6 border border-l-0 border-b-0 border-black">     
+        <div id="version-1" data-value="not-selected" class="p-4 flex flex-col items-center justify-center">
+            <span class="text-nunito">Version 1</span>
+        </div>
+    </div>
+    <div class="border-t border-black"></div>
+</div>
+<div class="grid grid-cols-[3.5rem_minmax(0,1fr)_minmax(0,1fr)_3.5rem]  bg-zinc-700 text-white">
+    <div class="border-t border-b border-black"></div>
+    <div class="col-start-2 col-end-3 border border-black">     
+        <div class="p-4 flex flex-col items-center justify-center">
+            <a href="{github}">
+                <span class="text-nunito">View source code</span>
+            </a>
+        </div>
+    </div>
+    <div class="col-start-3 col-end-4 border border-l-0 border-black">     
+        <div class="p-4 flex flex-col items-center justify-center">
+            <a href="{demo}">
+                <span class="text-nunito">View demo</span>
+            </a>
+        </div>
+    </div>
+    <div class="border-t border-b border-black"></div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">Dicussing our Infrustructure Choices</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 1
+        </div>
+        <p class="font-nunito text-md py-2">
+            The infrastructure built for this project comprises a Raspberry Pi, an Eversys espresso machine, 
+            and a custom web server. We chose the Raspberry Pi for its cost-effectiveness and versatility in 
+            controlling the espresso machine's operations and managing data. The custom web server supports 
+            real-time order processing and customer management. These choices were strategically made to keep 
+            operational costs low, enhancing our financial sustainability. Additionally, the modular nature of 
+            our setup allows for easy scalability with minimal investment, ensuring we can expand our services 
+            efficiently as demand grows.
+        </p>
+        <p class="font-nunito text-md py-2">
+            The way all these components interact with the espresso machine is through serial communication and the 
+            Eversys API. The Eversys API is a dynamic link library, which was one of the reasons that led us to choose 
+            to code in C#. A significant advantage of using C# was leveraging the Xamarin framework, allowing us to compile 
+            natively for both iOS and Android. Our web framework is built with ASP.NET Core, complementing our other 
+            infrastructure choices and ensuring a seamless integration across all platforms.
+        </p>
+    </div>
+</div>
+<div class="max-w-3xl mx-auto px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">How Everything Fits Together</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 2
+        </div>
+        <p class="font-nunito text-md py-2">
+            Now that we have a general understanding of the key components driving our automated espresso machine, let’s delve 
+            deeper into the specifics of each element. This will help us undeerstand how they all fit into the bigger puzzle.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">The App Code</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            The app code serves as the primary interface for our users. It features a dynamic cart system 
+            that allows users to add, delete, and edit items in their order. Within this app, we define the various 
+            coffee options available, along with any customization options. After users finalize their selections and the 
+            order passes initial validation, it is then sent to our web server for processing. This streamlined interaction ensures 
+            a user-friendly experience while maintaining the accuracy and efficiency of the order system.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">The web server</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            Our web server plays a critical role in managing the coffee ordering process. It constructs a 
+            coffee interface that not only builds orders but also maintains a state tracking system. This system monitors 
+            the order’s progress—from confirmation to whether the espresso machine, controlled by the Raspberry Pi, 
+            has begun making the coffee. Additionally, the server manages a JSON database where coffee options are 
+            stored and updated. Once an order is confirmed, it is dispatched to the Raspberry Pi for execution, ensuring 
+            seamless operation from order entry to coffee delivery.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">Raspberry Pi</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            The Raspberry Pi serves as a crucial control hub in our coffee-making process. Its primary role is to 
+            monitor for QR code scans that trigger the brewing process. Upon detecting a QR scan, the Raspberry Pi sends a 
+            command via the serial port to the Eversys espresso machine, initiating the coffee preparation. Concurrently, 
+            it controls a syrup pump, integrating any specified syrups into the coffee as per the order details. Once the coffee 
+            is ready, the Raspberry Pi sends a confirmation signal back to the server, indicating that the order has been completed. 
+            This automation streamlines the brewing process, ensuring precision and efficiency in every cup.
+        </p>
+    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 pb-8 px-8 max-w-4xl mx-auto lg:px-0">
+    <div class="border border-black flex flex-col justify-center items-center p-4">
+        <img src="/static/images/navi_infrustructure.svg" alt="Infrastructure Diagram" height="400" width="400">
+    </div>
+    <div class="border border-l-0 border-black p-4">
+        <p class="font-nunito text-md py-2">
+            Here’s a visual breakdown of our automated espresso system's infrastructure. 
+            It maps out the integration between the Raspberry Pi, our web server, and the espresso machine, 
+            offering a glimpse into how we streamline every cup of coffee.
+        </p>
+    </div>
+</div>
+<div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
+    <div class="p-4 relative">
+        <h6 class="font-roboto text-xl mt-4 mb-2">Challenges we Encountered</h6>
+        <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
+            Subheader 3
+        </div>
+        <p class="font-nunito text-md py-2">
+            "It’s not that I’m so smart, it’s just that I stay with problems longer." - Albert Einstein
+        </p>
+        <div class="p-4 relative flex flex-col justify-start">
+            <div class="grid grid-cols-[30px_minmax(0,1fr)]">
+                <div class="border border-black flex justify-center items-center p-4 bg-custom-pink">
+                    <h1 class="font-roboto">1</h1> 
+                </div>
+                <div class="border border-l-0 border-black p-4 flex flex-col justify-start">
+                    <p class="font-nunito text-md">
+                        No way to track the progress of differnt stages of the coffee making process.
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-[30px_minmax(0,1fr)]">
+                <div class="border border-t-0 border-black flex justify-center items-center p-4 bg-custom-pink">
+                    <h1 class="font-roboto">2</h1> 
+                </div>
+                <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
+                    <p class="font-nunito text-md">
+                        Our qr code scanner is sending signals as individual key presses. 
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-[30px_minmax(0,1fr)]">
+                <div class="border border-t-0 border-black flex justify-center items-center p-4 bg-custom-pink">
+                    <h1 class="font-roboto">3</h1> 
+                </div>
+                <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
+                    <p class="font-nunito text-md">
+                        The dyanmic link library is hard to read and needs a windows computer. 
+                    </p>
+                </div>
+            </div>
+            <div class="grid grid-cols-[30px_minmax(0,1fr)]">
+                <div class="border border-t-0 border-black flex justify-center items-center p-4 bg-custom-pink">
+                    <h1 class="font-roboto">4</h1> 
+                </div>
+                <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
+                    <p class="font-nunito text-md">
+                        Too many to keep track of. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">Solution #1</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            The challenge with the caramel syrup pump was a significant one—it kept dispensing without stopping, leading to wastage and a messy work area. To tackle this, we developed a state machine integrated into our system's software. This machine was programmed to monitor the syrup’s flow precisely, ensuring that it dispensed the correct amount for each order based on real-time feedback from sensors. This solution not only solved the overflow issue but also improved the overall precision of our beverage crafting process.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">Solution #2</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            Our next issue arose when integrating the QR code scanner. Initially designed for Windows, the scanner was sending responses as a series of key presses, which our system misinterpreted, causing order mishaps. We first tried interfacing with the scanner using a standard Python library, which proved inadequate. The breakthrough came when we custom-developed a script that could interpret the key presses as meaningful commands within our order processing system. This script effectively translated the scanner input into actionable data, streamlining the order entry process.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">Solution #3</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            Although we never fully implemented this third solution, the idea was to overhaul the communication protocol by recoding the existing dynamic link library (DLL) in Python. The goal was to utilize byte manipulation to simplify the API, making it more robust and easier to maintain. This would have allowed us to have more granular control over the hardware interactions, potentially leading to even more precise control and diagnostics capabilities across the system.
+        </p>
+        <div class="p-4 relative flex flex-col justify-start gap-4">
+            <h6 class="font-roboto text-md border-b border-black w-fit">Solution #4</h6>
+        </div>
+        <p class="font-nunito text-md px-4 py-2">
+            The journey through this project was rife with challenges, each pushing our team's capabilities and creativity. Our steadfast approach was to persevere through each obstacle, continuously adapting and learning. This iterative process was crucial not only in overcoming the immediate technical hurdles but also in building a resilient team dynamic. Our project might not have scaled to the heights of Silicon Valley startups, but the wealth of knowledge and practical experience we gained is invaluable, proving that every challenge is a stepping stone to greater expertise.
+        </p>
+    </div>
+</div>
+<div class="w-full border-t border-b border-black p-4 relative flex justify-center bg-custom-pink">
+    <h1 class="font-vt text-3xl md:text-4xl lg:text-5xl sm:text-lg">Thanks for reading!</h1>
 </div>

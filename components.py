@@ -18,9 +18,13 @@ class NavComponent(BaseComponent):
 
     # If htmx request handle it here
     def reactive(self, request):
-        print(request)
-        template_path = "partial/project.html"
-        return template_path
+        if request.REQUEST_METHOD == "GET":
+            data = getattr(request, "htmx-data", None)
+
+            if data:
+                project_name = data.get("project")
+                project = Project()
+                project_obj = project.find_one(lambda x: x["slug"] == project_name)
 
 
 class FooterComponent(BaseComponent):
@@ -72,6 +76,10 @@ class SidebarComponent(BaseComponent):
                 template_path = "partials/htpyx_project.html"
             elif project_name == "navi":
                 template_path = "partials/navi_project.html"
+            elif project_name == "stock":
+                template_path = "partials/stock_project.html"
+            elif project_name == "bar":
+                template_path = "partials/bar_project.html"
             else:
                 template_path = None
 

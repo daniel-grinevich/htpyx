@@ -1,54 +1,52 @@
 <div>
-    <h1 class="font-league color-black">My Work</h1>
-    <div id="project-list" class="project-list font-now-reg">
-        <a id="htpyx-link" class="project-link" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#project-info" hx-trigger="click" hx-vals="js:{myVals:getProjectData('htpyx')}" onclick="animateCanvas(event)">
-
-            <div id="htpyx" class="project-item" data-title="HTpyX" data-color="0.42" data-color-x="#14D88A" data-color-y="#1FBEC0">
+    <div class="block relative p-4 max-w-max">
+        <h1 class="font-roboto text-lg md:text-xl lg:text-3xl">My Work</h1>
+        <p id="header-tag" class="font-nunito absolute text-md right-0 bottom-0 bg-custom-red border border-black">Header</p>
+    </div>
+    <div id="project-list" class="font-nunito px-4 py-8 flex flex-col gap-2">
+        <a id="htpyx-link"  class="cursor-pointer" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#mainContent" hx-trigger="click" hx-vals="js:{myVals:getProjectData('htpyx')}" onclick="animateCanvas(event)">
+            <div id="projectItem-1" class="flex flex-row border-b border-black gap-4">
                 <div>
                     <p>01</p>
                 </div>
-                <div class="span-wrap">
+                <div id="spanWrap">
                     <span>H</span><span>T</span><span>p</span><span>y</span><span>X</span>
                     <span>W</span><span>e</span><span>b</span>
                     <span>F</span><span>r</span><span>a</span><span>m</span><span>e</span><span>w</span><span>o</span><span>r</span><span>k</span>
                 </div>
             </div>
         </a>
-        <a id="navi-link" class="project-link" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#project-info" hx-trigger="click" hx-vals="js:{myVals:getProjectData('navi')}" onclick="animateCanvas(event)">
-            <div id="navicoffee" class="project-item" data-title="Navi Coffee" data-color="0.52">
+        <a id="navi-link" class="cursor-pointer" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#mainContent" hx-trigger="click" hx-vals="js:{myVals:getProjectData('navi')}" onclick="animateCanvas(event)">
+            <div id="projectItem-2" class="flex flex-row border-b border-black gap-4">
                 <div>
                     <p>02</p>
                 </div>
-                <div class="span-wrap">
+                <div id="spanWrap">
                     <span>N</span><span>a</span><span>v</span><span>i</span>
                     <span>C</span><span>o</span><span>f</span><span>f</span><span>e</span><span>e</span>
                 </div>
             </div>
         </a>
-        <a class="project-link">
-            <div id="stockbot" class="project-item" data-title="Stock Trading Bot" data-color="0.62">
+        <a id="stock-link" class="cursor-pointer" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#mainContent" hx-trigger="click" hx-vals="js:{myVals:getProjectData('stock')}" onclick="animateCanvas(event)">
+            <div id="projectItem-3" class="flex flex-row border-b border-black gap-4">
                 <div>
                     <p>03</p>
                 </div>
-                <div class="span-wrap">
+                <div id="spanWrap">
                     <span>S</span><span>t</span><span>o</span><span>c</span><span>k</span>
                     <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
                     <span>B</span><span>o</span><span>t</span>
-                    <span>C</span><span>o</span><span>m</span><span>i</span><span>n</span><span>g</span>
-                    <span>S</span><span>o</span><span>o</span><span>n</span><span>!</span>
                 </div>
             </div>
         </a>
-        <a class="project-link">
-            <div id="barml" class="project-item" data-title="Bar Machine Learning" data-color="0.72">
+        <a id="bar-link" class="cursor-pointer" hx-headers='{"X-Component": "sidebar"}' hx-get="/" hx-target="#mainContent" hx-trigger="click" hx-vals="js:{myVals:getProjectData('bar')}" onclick="animateCanvas(event)">
+            <div id="projectItem-4" class="flex flex-row border-b border-black gap-4">
                 <div>
                     <p>04</p>
                 </div>
-                <div class="span-wrap">
+                <div id="spanWrap">
                     <span>M</span><span>a</span><span>c</span><span>h</span><span>i</span><span>n</span><span>e</span>
                     <span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>i</span><span>n</span><span>g</span>
-                    <span>C</span><span>o</span><span>m</span><span>i</span><span>n</span><span>g</span>
-                    <span>S</span><span>o</span><span>o</span><span>n</span><span>!</span>
                 </div>
             </div>
         </a>

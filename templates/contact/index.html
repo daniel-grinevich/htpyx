@@ -1,19 +1,21 @@
 {% block webpage %}
-<div class="navbar">
-    {% component nav %}
-</div>
-<div class="footer">
-    <div class="contents">
-        <div>
-            <h2 class="font-league">You can contact me!</h2>
-            <p class="font-now-reg">
-                Feel free to get in touch with me! Would love to talk about any 
-                oppourtunties or if you are just intersting in learnign more about me. 
-                My email is danielvgrinevich@gmail.com and my phone number is 
-                (336) 782-0109. 
-            </p>
+<div class="grid gird-cols-1 grid-rows-[auto_1fr]">
+    <div id="nav" class="col-start-1 col-span-1 p-4 border-b border-black z-10">
+        {% component nav %}
+    </div>
+    <div class="footer">
+        <div class="contents">
+            <div>
+                <h2 class="font-league">You can contact me!</h2>
+                <p class="font-now-reg">
+                    Feel free to get in touch with me! Would love to talk about any 
+                    oppourtunties or if you are just intersting in learnign more about me. 
+                    My email is danielvgrinevich@gmail.com and my phone number is 
+                    (336) 782-0109. 
+                </p>
+            </div>
+            {% component contactform %}
         </div>
-        {% component contactform %}
     </div>
 </div>
 {% endblock webpage %}

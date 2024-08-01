@@ -53,9 +53,6 @@ class BaseView:
         )
         return (status, headers, body)
 
-    def post(self):
-        return self.http_method_not_allowed()
-
     def render(self, **kwargs):
         base_template = kwargs.get("base_template", None)
         view_template = kwargs.get("view_template", None)
@@ -104,6 +101,9 @@ class BaseView:
             return reactive_method(request)
         else:
             raise ValueError("HTMX call on a component with no HTMX")
+
+    def post(self):
+        return self.http_method_not_allowed()
 
     def get_components(self):
         print("get_components")

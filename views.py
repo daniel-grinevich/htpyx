@@ -57,3 +57,16 @@ class AboutView(BaseView):
     def template(self):
         template_path = "about/index.html"
         return template_path
+
+
+class ResumeView(BaseView):
+    def __init__(self, request):
+        super().__init__()
+        self.request = request
+        self.components = {
+            "nav": NavComponent(name="nav_component"),
+        }
+
+    def template(self):
+        template_path = "resume/index.html"
+        return template_path

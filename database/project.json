@@ -4,10 +4,15 @@
             "id": 1,
             "slug": "htpyx",
             "name": "HTpyX",
+            "github": "https://github.com/daniel-grinevich/htpyx.git",
             "description": "This light web framework is centered on a component-based approach to Python web development. This framework leverages HTMX to create responsive websites efficiently. It features an ORM, template engine, and well-structured routing with view classes. Uniquely, it utilizes a JSON-based database system for data storage, adopting a NoSQL approach to manage data dynamically. This design not only facilitates rapid development but also ensures scalability and flexibility in handling diverse web application needs.",
             "stack": "Python, JavaScript, HTTP, JSON, Gunicorn, Raspberry Pi, HTMX, CSS",
+            "goal": "This project aims to create a light web framework to learn more about the core concepts of web development.",
             "body": [
-                "This is for teting purposes"
+                {
+                    "header": "Designing a Light Web Framework From Scratch",
+                    "content": "Introduction to HTpyX"
+                }
             ],
             "image": [
                 "/static/img/component.svg"
@@ -17,8 +22,29 @@
             "id": 2,
             "slug": "navi",
             "name": "Navi Coffee",
+            "github": "https://github.com/daniel-grinevich/NaviCoffee.git",
+            "demo": "https://www.youtube.com/watch?v=S6VV4YaITsU",
             "description": "This project involved the development of a fully automated coffee machine that streamlines the beverage ordering process through advanced QR code technology. Aimed at enhancing user experience in fast-paced environments, this coffee machine allows customers to select their beverage choice from a mobile app, which then generates a unique QR code for their order. Upon scanning the QR code at the machine, the system automatically retrieves the order details and precisely brews the selected coffee variant, delivering a perfectly tailored cup every time.",
-            "stack": "C#, ASP.NET, Eversys API, Azure, Raspberry Pi"
+            "stack": "C#, ASP.NET, Eversys API, Azure, Raspberry Pi",
+            "goal": "This project aims to create a light web framework to learn more about the core concepts of web development."
+        },
+        {
+            "id": 3,
+            "slug": "stock",
+            "name": "Stock Trading Bot",
+            "github": "https://github.com/daniel-grinevich/stock-trading-bot.git",
+            "description": "This bot is designed to automate the trading process for a stock exchange. It uses a combination of technical analysis and fundamental analysis to make informed decisions on buying and selling stocks. The bot is powered by Python and utilizes the Yahoo Finance API to backtest and ETrade API to gather data and execute trades.",
+            "stack": "Python, Pandas, ETrade API, Yahoo Finance API, Mat plot, Scikit-learn",
+            "goal": "I worked on this project to learn how I can create an automated proccing using some concepts from machine learning and data science."
+        },
+        {
+            "id": 4,
+            "slug": "bar",
+            "name": "Bar Inventory Machine Learning",
+            "github": "https://github.com/daniel-grinevich/stock-trading-bot.git",
+            "description": "This bot is designed to automate the trading process for a stock exchange. It uses a combination of technical analysis and fundamental analysis to make informed decisions on buying and selling stocks. The bot is powered by Python and utilizes the Yahoo Finance API to backtest and ETrade API to gather data and execute trades.",
+            "stack": "Python, Pandas, ETrade API, Yahoo Finance API, Mat plot, Scikit-learn",
+            "goal": "I worked on this project to learn how I can create an automated proccing using some concepts from machine learning and data science."
         }
     ]
 }

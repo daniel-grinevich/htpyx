@@ -80,6 +80,10 @@ class Micro:
             )
 
         start_response(status, headers)  # Start the HTTP response
+
+        if headers[0][1] == "image/png":
+            return [body]
+
         return [body.encode("utf-8")]
 
 

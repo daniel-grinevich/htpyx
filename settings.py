@@ -50,6 +50,15 @@ class StaticHandler:
                 content = f.read()
                 content_type, _ = mimetypes.guess_type(file_path)
                 content_type = content_type or "application/octet-stream"
+
+                if content_type == "image/png":
+                    headers = [
+                        ("Content-Type", content_type),
+                        ("Content-Length", str(len(content))),
+                        ("Cache-Control", "max-age=86400"),
+                    ]
+                    return "200 OK", headers, content
+
                 return (
                     "200 OK",
                     [("Content-Type", content_type)],
