@@ -230,25 +230,41 @@
             <h6 class="font-roboto text-md border-b border-black w-fit">Solution #1</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            The challenge with the caramel syrup pump was a significant one—it kept dispensing without stopping, leading to wastage and a messy work area. To tackle this, we developed a state machine integrated into our system's software. This machine was programmed to monitor the syrup’s flow precisely, ensuring that it dispensed the correct amount for each order based on real-time feedback from sensors. This solution not only solved the overflow issue but also improved the overall precision of our beverage crafting process.
+            The challenge with the caramel syrup pump was a messy one. It continually dispensed syrup without stopping, 
+            leading to both wastage and a messy work environment. To address this, we designed a state machine that was 
+            integrated into our system's web server. The state machine monitored the different stages 
+            of the coffee-making process, ensuring that syrup was dispensed only at the correct step. Not only did this solution 
+            fix the overflow issue, but it also introduced a valuable feature: the ability to lock an espresso machine to a single 
+            order, effectively preventing the possibility of double-scanning a coffee. 
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">Solution #2</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            Our next issue arose when integrating the QR code scanner. Initially designed for Windows, the scanner was sending responses as a series of key presses, which our system misinterpreted, causing order mishaps. We first tried interfacing with the scanner using a standard Python library, which proved inadequate. The breakthrough came when we custom-developed a script that could interpret the key presses as meaningful commands within our order processing system. This script effectively translated the scanner input into actionable data, streamlining the order entry process.
+            Our next challenge emerged during the integration of the QR code scanner. We had initially coded a Python 
+            script to interact with the scanner; however, it failed to function as expected. The issue stemmed from our 
+            lack of knowledge about the appropriate scanner model to purchase. The model we acquired sent responses in 
+            the form of key presses, which our system could not interpret correctly. To resolve this, we had to modify 
+            and rewrite our scanner code, enabling it to translate these key presses into meaningful commands within our 
+            order processing system.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">Solution #3</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            Although we never fully implemented this third solution, the idea was to overhaul the communication protocol by recoding the existing dynamic link library (DLL) in Python. The goal was to utilize byte manipulation to simplify the API, making it more robust and easier to maintain. This would have allowed us to have more granular control over the hardware interactions, potentially leading to even more precise control and diagnostics capabilities across the system.
+            Although we never fully implemented this third solution, the idea was to overhaul the communication protocol by recoding the 
+            existing dynamic link library (DLL) in Python. The goal was to utilize byte manipulation to simplify the API, making it more 
+            robust and easier to maintain. This would have allowed us to have more granular control over the hardware interactions, potentially 
+            leading to even more precise control and diagnostics capabilities across the system.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">Solution #4</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            The journey through this project was rife with challenges, each pushing our team's capabilities and creativity. Our steadfast approach was to persevere through each obstacle, continuously adapting and learning. This iterative process was crucial not only in overcoming the immediate technical hurdles but also in building a resilient team dynamic. Our project might not have scaled to the heights of Silicon Valley startups, but the wealth of knowledge and practical experience we gained is invaluable, proving that every challenge is a stepping stone to greater expertise.
+            The journey through this project was rife with challenges, each pushing our team's capabilities and creativity. We kept 
+            iterating through each obstacle, and although it was hard we perservered to develop version 1. We may never have gotten the 
+            silicon valley funding we hoped for but the wealth of knowledge and practical experience we gained is invaluable, proving that 
+            every challenge is a stepping stone to greater expertise.
         </p>
     </div>
 </div>
