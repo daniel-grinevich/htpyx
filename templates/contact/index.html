@@ -1,20 +1,50 @@
 {% block webpage %}
-<div class="grid gird-cols-1 grid-rows-[auto_1fr]">
+<div class="grid grid-cols-1 grid-rows-[auto,1fr] h-screen">
     <div id="nav" class="col-start-1 col-span-1 p-4 border-b border-black z-10">
         {% component nav %}
     </div>
-    <div class="footer">
-        <div class="contents">
-            <div>
-                <h2 class="font-league">You can contact me!</h2>
-                <p class="font-now-reg">
-                    Feel free to get in touch with me! Would love to talk about any 
-                    oppourtunties or if you are just intersting in learnign more about me. 
-                    My email is danielvgrinevich@gmail.com and my phone number is 
-                    (336) 782-0109. 
-                </p>
+    <div class="grid grid-rows-[3.5rem_minmax(0,1fr)_3.5rem]">
+        <div class="grid md:grid-cols-[3.5rem_minmax(0,1fr)_3.5rem] lg:grid-cols-[8rem_minmax(0,1fr)_8rem]">
+            <div class="col-start-1 col-end-2 border-r border-black">
             </div>
-            {% component contactform %}
+            <div class="col-start-2 col-end-3">
+            </div>
+            <div class="col-start-3 col-end-4 border-l border-black">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-[3.5rem_minmax(0,1fr)_3.5rem] lg:grid-cols-[8rem_minmax(0,1fr)_8rem]">
+            <!-- Left Spacer Column - Hidden on small screens -->
+            <div class="hidden md:block md:col-start-1 md:col-end-2 border-r border-t border-b border-black">
+            </div>
+            <!-- Middle Content Column - Takes full width on small screens, adjusts on medium and large screens -->
+            <div class="col-start-1 col-end-2 md:col-start-2 md:col-end-3 border-t border-b border-black flex flex-col md:flex-row space-around bg-white">
+                <div class="p-8 flex flex-col w-full md:w-1/2 border-r border-black">
+                    <h2 class="font-roboto text-3xl">You can contact me!</h2>
+                    <div class="my-4">
+                        <p class="font-now-reg">
+                            Feel free to get in touch with me! I would love to talk about any opportunities or if you are just interested in learning more about me.
+                        </p>
+                        <ul class="list-disc list-inside my-2">
+                            <li>Email: danielvgrinevich@gmail.com</li>
+                            <li>Phone: (336) 782-0109</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-8 w-full md:w-1/2">
+                    {% component contactform %}
+                </div>
+            </div>
+            <!-- Right Spacer Column - Hidden on small screens -->
+            <div class="hidden md:block md:col-start-3 md:col-end-4 border-l border-t border-b border-black">
+            </div>
+        </div>
+        <div class="grid md:grid-cols-[3.5rem_minmax(0,1fr)_3.5rem] lg:grid-cols-[8rem_minmax(0,1fr)_8rem]">
+            <div class="col-start-1 col-end-2 border-r border-black">
+            </div>
+            <div class="col-start-2 col-end-3">
+            </div>
+            <div class="col-start-3 col-end-4 border-l border-black">
+            </div>
         </div>
     </div>
 </div>

@@ -2,14 +2,14 @@
 <div class="sm:block md:hidden lg:hidden xl:hidden">
     <h1>Please resize your browser to see the full experience</h1>
 </div>
-<div class="hidden sm:hidden md:relative md:h-screen md:grid  md:grid-cols-[1fr_150px] lg:grid-cols-[1fr_250px] xl:grid-cols-[1fr_350px] md:grid-rows-[auto_1fr]">
+<div class="hidden sm:hidden md:relative md:h-screen md:grid  md:grid-cols-[1fr_250px] lg:grid-cols-[1fr_250px] xl:grid-cols-[1fr_350px] md:grid-rows-[auto_1fr]">
     <!-- Navbar across the top of the main content only -->
     <div id="nav" class="col-start-1 col-span-1 p-4 border-b border-black z-10">
         {% component nav %}
     </div>
 
     <!-- Sidebar that extends full height starting from the top to the bottom -->
-    <div class="col-start-2 row-span-2 border-l border-black overflow-auto">
+    <div id="sidebar" class="col-start-2 row-span-2 border-l border-black overflow-auto">
         <!-- Sidebar content or project list -->
         {% component sidebar %}
     </div>
@@ -17,11 +17,11 @@
     <!-- Main content area below the navbar, beside the sidebar -->
     <div id="mainContent" class="relative col-start-1 col-end-2 row-start-2 bg-white overflow-auto">
         <!-- Your main content goes here -->
-       <div class="w-full h-full flex justify-center items-center">
-            <div>
-                PICK A PROJECT TO GET STARTED . . . 
-            </div>
-       </div>
+       
+        <div id="mainContent-text" class="font-roboto bg-custom-red text-md p-4 border border-black absolute top-0 left-0 whitespace-nowrap inline-block">
+            Pick a project to get started
+        </div>
+
     </div>
     <div id="banner-left" class="sm:hidden md:hidden lg:hidden xl:block border-b border-black">
         <div id="marquee-inner">

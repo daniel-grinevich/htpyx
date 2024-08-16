@@ -40,11 +40,11 @@
         {
             "id": 4,
             "slug": "bar",
-            "name": "Bar Inventory Machine Learning",
+            "name": "Bar Inventory ML",
             "github": "https://github.com/daniel-grinevich/stock-trading-bot.git",
-            "description": "This bot is designed to automate the trading process for a stock exchange. It uses a combination of technical analysis and fundamental analysis to make informed decisions on buying and selling stocks. The bot is powered by Python and utilizes the Yahoo Finance API to backtest and ETrade API to gather data and execute trades.",
-            "stack": "Python, Pandas, ETrade API, Yahoo Finance API, Mat plot, Scikit-learn",
-            "goal": "I worked on this project to learn how I can create an automated proccing using some concepts from machine learning and data science."
+            "description": "This project aims to create a inventory management system for a bar. It utilizes image recognition and machine learning to identify and track inventory levels.",
+            "stack": "Django, YOLOv8, Pytorch, Raspberry Pi",
+            "goal": "To learn how to create a large-scale machine learning model and to try to sell it to a bar."
         }
     ]
 }

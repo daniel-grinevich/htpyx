@@ -100,10 +100,9 @@ class ContactFormComponent(BaseComponent):
                 data = getattr(request, "htmx-data")
                 name = data["name"][0]
                 email = data["email"][0]
-                phone = data["phone"][0]
 
                 contact = Contact()
-                contact.add({"name": name, "email": email, "phone": phone})
+                contact.add({"name": name, "email": email})
 
                 template_path = "partials/success.html"
                 return self.render(template=template_path)

@@ -1,4 +1,4 @@
-from views import HomeView, ContactView, AboutView, ResumeView
+from views import HomeView, ContactView, AboutView, ResumeView, BlogView
 from settings import STATIC_URL, StaticHandler
 
 routes = {
@@ -6,5 +6,6 @@ routes = {
     "/contact/": ContactView,
     "/about/": AboutView,
     "/resume/": ResumeView,
+    "/blog/": BlogView,
     STATIC_URL: StaticHandler,
 }

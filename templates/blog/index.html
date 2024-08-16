@@ -1,0 +1,17 @@
+{% block webpage %}
+<div class="flex flex-col min-h-screen">
+    <div id="nav" class="p-4 border-b border-black">
+        {% component nav %}
+    </div>
+    <div class="flex-grow p-4">
+        <div class="grid grid-cols-3 gap-8">
+            <div class="border border-black bg-white p-6 flex flex-col cursor-pointer">
+                <h1 class="font-roboto text-2xl">How I Host My Portfolio</h1>
+                <p class="mt-4 font-nunito text-base">
+                    Discover insights and updates on our projects, straight from the heart of our operations. Unfiltered. Raw.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock webpage %}

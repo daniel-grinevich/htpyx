@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentLink = null;
 
     const projectItems = document.querySelectorAll('[id^="projectItem-"]');
+    const sideBar = document.getElementById('sidebar');
     
 
     projectItems.forEach(item => {
@@ -14,15 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
             currentLink = item;
             isHovering = true;
+ 
+            if (sideBar.getBoundingClientRect().width > 250) {
+                const titleDiv = document.createElement('div');
+                titleDiv.id = 'animateLabel';  // Add class for styling
+                titleDiv.className = 'px-1 font-nunito border border-black absolute top-0 right-0';  // Add class for styling
+                titleDiv.style.backgroundColor = 'var(--fs-red)';  // Set the background color
+                titleDiv.textContent = 'Animating';  // Set text content
 
-            const titleDiv = document.createElement('div');
-            titleDiv.id = 'animateLabel';  // Add class for styling
-            titleDiv.className = 'px-1 font-nunito border border-black';  // Add class for styling
-            titleDiv.style.backgroundColor = 'var(--fs-red)';  // Set the background color
-            titleDiv.textContent = 'Animating';  // Set text content
-
-            console.log('Hovering over:', item);
-            item.appendChild(titleDiv);
+                console.log('Hovering over:', item);
+                item.appendChild(titleDiv);
+            }
+            
             // item.appendChild(`<div class="project-title">Hi</div>`);
             // animateDisplay(true, title, color);
             animateLink(item, this.id); // Animate the link text
@@ -203,4 +207,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     animateMarquee();
+});
+
+document.body.addEventListener('htmx:afterSwap', function(event) {
+    console.log('Event target:', event.target);
+    const mainContent = document.getElementById('mainContent');
+
+    if (event.target === mainContent || mainContent.contains(event.target)) {
+        console.log('Scrolling to top of mainContent');
+        mainContent.scrollTop = 0; // Scroll the mainContent to top, if it's scrollable
+    } else {
+        console.log('Scrolling to top of window');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 });

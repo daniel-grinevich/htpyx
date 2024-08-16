@@ -43,6 +43,8 @@ class BaseModel:
         class_key = self.__class__.__name__.lower() + "s"
         data = self.data.get(class_key)
         if data:
+            next_id = max(x["id"] for x in data) + 1
+            item["id"] = next_id
             data.append(item)
         else:
             self.data[class_key] = [item]

@@ -47,9 +47,6 @@
         <a id="githubLink" href="{github}" class="border border-black text-black px-4 py-2 inline-block hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-black active:bg-gray-300" style="margin-top: -2px; text-align: center;">
             <span class="font-nunito text-md">View source code</span> <!-- Consistent font usage -->
         </a>
-        <div class="font-nunito">
-            content
-        </div>
     </div>
 </div>
 <div class="w-full border-t border-b border-black p-4 relative flex justify-center bg-custom-pink">
@@ -71,12 +68,13 @@
     </div>
     <div class="p-4  my-4 relative">
         <p class="font-nunito text-md">
-            The architecture of HTpyX may remind you of Django, a deliberate choice to make transitioning between the two frameworks 
-            feel seamless. By adopting this familiar structure, HTpyX not only eases the learning curve for developers but also offers a 
-            lightweight and agile framework alternative for modern web development. Through class inheritance, you can create reusable views and 
-            extend them to include versatile components that respond efficiently to HTMX requests. This integration results in a framework that is as 
-            responsive and fluid as coding a single-page application with React. HTpyX is particularly well-suited for small to medium-sized projects 
-            or rapid prototyping, making it a versatile tool in a developer’s arsenal.
+            The architecture of HTpyX is inspired by Django, making it easier for developers to transition between 
+            the two frameworks. HTpyX serves as a lightweight framework ideal for quickly crafting prototypes or proofs 
+            of concept, while Django can be employed to develop robust, production-ready applications. Through class inheritance, 
+            HTpyX enables the creation of reusable views that can be extended with versatile components. These components are designed 
+            to respond efficiently to HTMX requests, making the framework as responsive and fluid as coding a single-page application
+             with React. 
+            
         </p> 
     </div>
     <div class="p-4 relative">
@@ -277,9 +275,9 @@
         </div>
         <p class="font-nunito text-md py-2">
             The ORM in HTpyX is designed to interact in a NoSQL-like manner. Given that this is the initial version of the framework, 
-            and its primary use will be for prototyping projects, I decided to store all data in a folder, with each model represented by a 
+            and its primary use will be for prototyping projects, I decided to store all data in a folder with each model represented by a 
             separate JSON file. This approach provides a cost-effective way to store, manipulate, and retrieve data, making it ideal for prototyping 
-            and development phases. Currently, the functionality includes simple CRUD operations for the models.
+            and development phases. Currently, the functionality includes simple CRUD operations for the models and the ability to create custom queries.
         </p>
     </div>
 </div>
@@ -290,11 +288,12 @@
             Subheader 5
         </div>
         <p class="font-nunito text-md py-2">
-            The template engine is another extensively built feature of HTpyX. It's remarkably lightweight 
-            and designed for simplicity, making it easy to add content to the view. Since data can be stored without 
-            strict structural constraints, thisThe flexibility allows developers to rapidly prototype and iterate on their 
-            projects. The template engine supports dynamic content integration seamlessly, enabling a smooth development 
-            process even when dealing with diverse data formats.
+            The template engine is another extensively built feature of HTpyX. 
+            Like Django’s, it’s designed to be lightweight and straightforward, 
+            allowing you to easily add content to your views. One of its standout qualities 
+            is flexibility; it doesn’t require strict structural constraints for data storage. 
+            This makes it exceptionally user-friendly, supporting rapid development by simplifying 
+            the way you integrate and manage data.”
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">Template Inheritance</h6>

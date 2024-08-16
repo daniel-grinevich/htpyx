@@ -419,4 +419,15 @@ body {
     grid-template-columns: repeat(18, 28px);
     grid-template-rows: repeat(18, 28px);
 }
-
+#wide-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;  /* Full width */
+    height: 100%; /* Full viewport height */
+    background-image: 
+        linear-gradient(to right, black 1px, transparent 1px), 
+        linear-gradient(to bottom, black 1px, transparent 1px);
+    background-size: calc(100% / 6) 100%, 100% calc(100% / 5);
+    overflow: auto; /* Adds scrollbars if content overflows */
+}
