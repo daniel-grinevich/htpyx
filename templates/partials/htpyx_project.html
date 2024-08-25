@@ -78,7 +78,7 @@
         </p> 
     </div>
     <div class="p-4 relative">
-        <h6 class="font-roboto text-xl mt-4 mb-2">Building the view layer</h6>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Building the View Layer</h6>
         <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
             Subheader 2
         </div>
@@ -188,10 +188,10 @@
     </div>
     <div class="p-4  my-4 relative">
         <p class="font-nunito text-md">
-            Desipite there not being a lot of code here, there is a lot of functionality. You can override any of the base methods to 
+            With just a few lines of code, you can achieve a fully functional view layer. You can override any of the base methods to 
             enhance the context passed to the view. In the example shown, I override the get_context_data method to pass in a dictionary 
             of data, which overrides the default context data. Most importantly, I define a list of components that are passed into the 
-            template and rendered, creating reactive and reusable components. As you can see the sidebar to the right of this screen is one of 
+            template and rendered, creating reactive and reusable components. As you can see, the sidebar to the right of this screen is one of 
             the components that was created. 
         </p> 
     </div>
@@ -204,7 +204,7 @@
         </div>
         <p class="font-nunito text-md py-2">
             Now that we've covered how to create custom views with components, let's explore how they interact with HTMX requests. We'll 
-            examine two examples to see this in action. The first is a sidebar component that responds to an HTMX GET request for project 
+            examine two examples. The first is a sidebar component that responds to an HTMX GET request for project 
             data. The second is a contact form component that handles a HTMX POST request, saving data to the NoSQL database.
         </p>
     </div>
@@ -261,10 +261,10 @@
     <p class="font-nunito text-md py-2">
         So far, this process should look fairly standard. We are determining whether the request method is GET or POST and 
         then processing the data passed to perform specific actions. As you might recall from the dispatch method code, 
-        we check for a HTTP_HX_REQUEST attribute to identify an HTMX request. If this attribute is present, it indicates that one of our 
-        components is reacting to a user event, and we can map the response accordingly. However, you might be curious about the htmx-data attribute mentioned 
+        we check for an HTTP_HX_REQUEST attribute to identify an HTMX request. If this attribute is present, it indicates that one of our 
+        components is reacting to a user event, and we can map the response accordingly. However, you might be curious about the HTMX-DATA attribute mentioned 
         in the example. This is a special attribute created by our custom middleware, designed specifically to handle data passed in by HTMX requests. For instance, 
-        in the POST scenario, all attributes submitted through the form are captured within the htmx-data attribute.
+        in the POST scenario, all attributes submitted through the form are captured within the HTMX-DATA attribute.
     </p>
 </div>
 <div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
@@ -274,16 +274,16 @@
             Subheader 4
         </div>
         <p class="font-nunito text-md py-2">
-            The ORM in HTpyX is designed to interact in a NoSQL-like manner. Given that this is the initial version of the framework, 
-            and its primary use will be for prototyping projects, I decided to store all data in a folder with each model represented by a 
-            separate JSON file. This approach provides a cost-effective way to store, manipulate, and retrieve data, making it ideal for prototyping 
+            The ORM in HTpyX is designed to interact in a NoSQL-like manner. Considering this is the first version of the framework and it is primarily 
+            intended for prototyping projects, I have chosen to store all data in a folder, with each model represented by its own JSON file. This approach provides a cost-effective way to store, 
+            manipulate, and retrieve data, making it ideal for prototyping 
             and development phases. Currently, the functionality includes simple CRUD operations for the models and the ability to create custom queries.
         </p>
     </div>
 </div>
 <div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
     <div class="p-4 relative">
-        <h6 class="font-roboto text-xl mt-4 mb-2">Template rending with the custom engine</h6>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Template Rending with the Custom Engine</h6>
         <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
             Subheader 5
         </div>
@@ -293,15 +293,15 @@
             allowing you to easily add content to your views. One of its standout qualities 
             is flexibility; it doesn’t require strict structural constraints for data storage. 
             This makes it exceptionally user-friendly, supporting rapid development by simplifying 
-            the way you integrate and manage data.”
+            the way you integrate and manage data.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">Template Inheritance</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            Template inheritance in HTpyX follows the standard by many other frameworks. It enables developers to define a 
-            base template with common layout elements and override speicfic sections with view-specific content. This method, 
-            enabled by the process_template_inheritance function, parses the base template to identify placeholders or block tags, 
+            Template inheritance in HTpyX follows the standard set by many other frameworks. It enables developers to define a 
+            base template with common layout elements and override specific sections with content. The 
+            PROCESS_TEMPLATE_INHERITENCE function parses the base template to identify placeholders or block tags, 
             which are then dynamically filled with content defined in view templates. This hierarchical structure ensures that the 
             application maintains a consistent look and feel while allowing each page or component to present unique content and 
             functionality, thereby improving maintainability and scalability of the codebase.
@@ -311,10 +311,10 @@
         </div>
         <p class="font-nunito text-md px-4 py-2">
             Component integration within HTpyX enhances modularity and reusability by allowing developers to define standalone, 
-            reusable components that can be embedded within various parts of the application. Through the process_component_injection 
-            function, the TemplateEngine dynamically inserts these components into the base template during rendering. Each component 
-            can include its own logic and rendering rules, which are processed separately before being integrated into the large page. 
-            This system promotes a clean speration of concerns and enables easier updates and testing, as components can be 
+            reusable components that can be embedded within various parts of the application. Through the PROCESS_COMPONENT_INJECTION 
+            function, the Template Engine dynamically inserts these components into the view template during rendering. Each component 
+            can include its own logic and rendering rules, which are processed separately before being integrated into the page. 
+            This system promotes a clean seperation of concerns and enables easier updates and testing, as components can be 
             developed and maintained independently from the main application code.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
@@ -329,12 +329,12 @@
 </div>
 <div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
     <div class="p-4 relative">
-        <h6 class="font-roboto text-xl mt-4 mb-2">What does the future for HTpyX look like?</h6>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Future of HtpyX</h6>
         <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
             Subheader 6
         </div>
         <p class="font-nunito text-md py-2">
-            For now, HTpyX will remain a prototyping tool for my personal projects. However, should I continue to develop this framework, I aim to make it more akin to how Next.js functions. 
+            For now, HTpyX will remain a prototyping tool for my personal projects. If I decide to move forward with the development of this framework, I plan to incorporate features more similar to those found in Next.js. 
             Specifically, I would shift the routing to be based on the file structure, where everything related to a particular view is defined in one file. This approach would foster a more 
             organized and modular development environment. Despite these changes, I would maintain a Django-style approach for developing views and components. I believe there is a market niche 
             for a hybrid framework that effectively combines the strengths of Python with the dynamic capabilities of React.

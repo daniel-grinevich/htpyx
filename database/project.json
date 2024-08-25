@@ -24,7 +24,7 @@
             "name": "Navi Coffee",
             "github": "https://github.com/daniel-grinevich/NaviCoffee.git",
             "demo": "https://www.youtube.com/watch?v=S6VV4YaITsU",
-            "description": "This project involved the development of a fully automated coffee machine that streamlines the beverage ordering process through advanced QR code technology. Aimed at enhancing user experience in fast-paced environments, this coffee machine allows customers to select their beverage choice from a mobile app, which then generates a unique QR code for their order. Upon scanning the QR code at the machine, the system automatically retrieves the order details and precisely brews the selected coffee variant, delivering a perfectly tailored cup every time.",
+            "description": "This project involved the development of a fully automated coffee machine that streamlines the beverage ordering process through QR code ordering technology. Aimed at enhancing user experience in fast-paced environments, this coffee machine allows customers to select their beverage choice from a mobile app, which then generates a unique QR code for their order. Upon scanning the QR code at the machine, the system automatically retrieves the order details and precisely brews the selected coffee variant, delivering a perfectly tailored cup every time.",
             "stack": "C#, ASP.NET, Eversys API, Azure, Raspberry Pi",
             "goal": "This project aims to create a light web framework to learn more about the core concepts of web development."
         },

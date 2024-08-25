@@ -97,12 +97,12 @@
 </div>
 <div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
     <div class="p-4 relative">
-        <h6 class="font-roboto text-xl mt-4 mb-2">Diving into our Infrustructure Choices</h6>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Diving Into Our Infrustructure Choices</h6>
         <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
             Subheader 1
         </div>
         <p class="font-nunito text-md py-2">
-            The infrastructure built for this project comprises a Raspberry Pi, an Eversys espresso machine, 
+            The infrastructure built for this project is comprised of a Raspberry Pi, an Eversys espresso machine, 
             and a custom web server. We chose the Raspberry Pi for its cost-effectiveness and versatility in 
             controlling the espresso machine's operations and managing data. The custom web server supports 
             real-time order processing and customer management. These choices were strategically made to keep 
@@ -111,9 +111,9 @@
             efficiently as demand grows.
         </p>
         <p class="font-nunito text-md py-2">
-            The way all these components interact with the espresso machine is through serial communication and the 
-            Eversys API. The Eversys API is a dynamic link library, which was one of the reasons that led us to choose 
-            to code in C#. A significant advantage of using C# was leveraging the Xamarin framework, allowing us to compile 
+            These components interact with the espresso machine through serial communication and the 
+            Eversys API. One of the main reasons we chose to code in C# was because the Eversys API is a dynamic link library.
+            A significant advantage of using C# was leveraging the Xamarin framework, allowing us to compile 
             natively for both iOS and Android. Our web framework is built with ASP.NET Core, complementing our other 
             infrastructure choices and ensuring a seamless integration across all platforms.
         </p>
@@ -127,26 +127,24 @@
         </div>
         <p class="font-nunito text-md py-2">
             Now that we have a general understanding of the key components driving our automated espresso machine, let’s delve 
-            deeper into the specifics of each element. This will help us undeerstand how they all fit into the bigger puzzle.
-        </p>
+            deeper into the specifics of each element. 
         <div class="p-4 relative flex flex-col justify-start gap-4">
             <h6 class="font-roboto text-md border-b border-black w-fit">The App Code</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
             The app code serves as the primary interface for our users. It features a dynamic cart system 
-            that allows users to add, delete, and edit items in their order. Within this app, we define the various 
-            coffee options available, along with any customization options. After users finalize their selections and the 
-            order passes initial validation, it is then sent to our web server for processing. This streamlined interaction ensures 
+            that allows users to add, delete, and edit items in their orders. Within this app, we define the various 
+            coffee options available along with all customization options. After users finalize their selections and the 
+            order passes initial validation, it's then sent to our web server for processing. This streamlined interaction ensures 
             a user-friendly experience while maintaining the accuracy and efficiency of the order system.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
-            <h6 class="font-roboto text-md border-b border-black w-fit">The web server</h6>
+            <h6 class="font-roboto text-md border-b border-black w-fit">The Web Server</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
             Our web server plays a critical role in managing the coffee ordering process. It constructs a 
             coffee interface that not only builds orders but also maintains a state tracking system. This system monitors 
-            the order’s progress—from confirmation to whether the espresso machine, controlled by the Raspberry Pi, 
-            has begun making the coffee. Additionally, the server manages a JSON database where coffee options are 
+            the order’s progress from confirmation to completion. Additionally, the server manages a JSON database where coffee options are 
             stored and updated. Once an order is confirmed, it is dispatched to the Raspberry Pi for execution.
         </p>
         <div class="p-4 relative flex flex-col justify-start gap-4">
@@ -157,7 +155,7 @@
             monitor for QR code scans that trigger the brewing process. Upon detecting a QR scan, the Raspberry Pi sends a 
             command via the serial port to the Eversys espresso machine, initiating the coffee preparation. Concurrently, 
             it controls a syrup pump, integrating any specified syrups into the coffee as per the order details. Once the coffee 
-            is ready, the Raspberry Pi sends a confirmation signal back to the server, indicating that the order has been completed.
+            is ready, the Raspberry Pi sends a confirmation signal back to the server indicating that the order has been completed.
         </p>
     </div>
 </div>
@@ -175,7 +173,7 @@
 </div>
 <div class="max-w-3xl mx-auto py-8 px-4 lg:px-0">
     <div class="p-4 relative">
-        <h6 class="font-roboto text-xl mt-4 mb-2">Challenges we Encountered</h6>
+        <h6 class="font-roboto text-xl mt-4 mb-2">Challenges We Encountered</h6>
         <div class="absolute bg-custom-red px-1 text-md border border-black top-0 left-0">
             Subheader 3
         </div>
@@ -189,7 +187,7 @@
                 </div>
                 <div class="border border-l-0 border-black p-4 flex flex-col justify-start">
                     <p class="font-nunito text-md">
-                        No way to track the progress of differnt stages of the coffee making process.
+                        No way to track the progress of different stages of the coffee making process.
                     </p>
                 </div>
             </div>
@@ -199,7 +197,7 @@
                 </div>
                 <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
                     <p class="font-nunito text-md">
-                        Our qr code scanner is sending signals as individual key presses. 
+                        QR code scanner is sending signals as individual key presses. 
                     </p>
                 </div>
             </div>
@@ -209,7 +207,7 @@
                 </div>
                 <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
                     <p class="font-nunito text-md">
-                        The dyanmic link library is hard to read and needs a windows computer. 
+                        Dyanmic link library is hard to read and needs a windows computer. 
                     </p>
                 </div>
             </div>
@@ -219,7 +217,7 @@
                 </div>
                 <div class="border border-l-0 border-t-0 border-black p-4 flex flex-col justify-start">
                     <p class="font-nunito text-md">
-                        Too many to keep track of. 
+                        Too many probelms to keep track of. 
                     </p>
                 </div>
             </div>
@@ -228,8 +226,8 @@
             <h6 class="font-roboto text-md border-b border-black w-fit">Solution #1</h6>
         </div>
         <p class="font-nunito text-md px-4 py-2">
-            The challenge with the caramel syrup pump was a messy one. It continually dispensed syrup without stopping, 
-            leading to both wastage and a messy work environment. To address this, we designed a state machine that was 
+            The challenge with the caramel syrup pump was a messy one. It continually dispensed syrup without stopping.
+             To address this, we designed a state machine that was 
             integrated into our system's web server. The state machine monitored the different stages 
             of the coffee-making process, ensuring that syrup was dispensed only at the correct step. Not only did this solution 
             fix the overflow issue, but it also introduced a valuable feature: the ability to lock an espresso machine to a single 
@@ -260,8 +258,8 @@
         </div>
         <p class="font-nunito text-md px-4 py-2">
             The journey through this project was rife with challenges, each pushing our team's capabilities and creativity. We kept 
-            iterating through each obstacle, and although it was hard we perservered to develop version 1. We may never have gotten the 
-            silicon valley funding we hoped for but the wealth of knowledge and practical experience we gained is invaluable, proving that 
+            iterating through each obstacle, and although it was hard, we perservered to develop Version 1. We may never have gotten the 
+            Silicon Valley funding we hoped for, but the wealth of knowledge and practical experience we gained was invaluable, proving that 
             every challenge is a stepping stone to greater expertise.
         </p>
     </div>

@@ -22,7 +22,7 @@ document.body.addEventListener('htmx:afterSwap', function() {
                             <div style="padding-left: 40px;"><span class="purple-code">return</span> handler()</div>
                             <div style="padding-left: 20px;"><span class="purple-code">else</span>:</div>
                             <div style="padding-left: 40px;"><span class="purple-code">return</span> <span class="red-code">self</span>.<span class="orange-code">http_method_not_allowed</span>()</div>`,
-            "description": `The dispatch method is called when the view is accessed by the router. It looks for the method that matches the request method on the child view class. If there is no method then it will call the method on the parent (base) view class.`
+            "description": `The dispatch method is called when the view is accessed by the router. It looks for the method that matches the request method on the child view class. If there is no method, then it will call the method on the parent (base) view class.`
         },
         {
             "name": "get",
