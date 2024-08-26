@@ -1,0 +1,40 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Set up SSH for Raspberry Pi
+      run: | 
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_MY_MAC_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H 192.168.86.30 >> ~/.ssh/known_hosts
+
+    - name: Deploy application to Raspberry Pi
+      run: | 
+        rsync -avz --exclude '.git*' ./ dandelion@192.168.86.30:/home/dandelion/projects/htpyx
+        ssh dandelion@192.168.86.30 "cd /home/dandelion/projects/htpyx && ./deploy_script.sh"
+        echo "finished"
