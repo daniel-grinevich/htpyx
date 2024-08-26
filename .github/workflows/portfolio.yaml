@@ -1,41 +1,25 @@
-name: Portfolio Deploy
+name: Test SSH Connection
 
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
-  deploy:
+  test-ssh:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
-
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Deploy to Raspberry Pi
-      if: success()
+    - name: Test SSH Connection
       run: |
         # Create a temporary file for the SSH key
         echo "${{ secrets.SSH_MY_MAC_KEY }}" > /tmp/ssh_key
         chmod 600 /tmp/ssh_key
         
-        # Deploy with rsync
-        rsync -avz -e "ssh -i /tmp/ssh_key" --exclude '.git*' ./ dandelion@192.168.86.30:/home/dandelion/projects/htpyx/
-        
-        # Execute the deploy script
-        ssh -i /tmp/ssh_key dandelion@192.168.86.30 "cd /home/dandelion/projects/htpyx && ./deploy_script.sh"
+        # Attempt to SSH into the Raspberry Pi and echo a message
+        ssh -i /tmp/ssh_key dandelion@192.168.86.30 "echo 'Connected successfully!'"
         
         # Clean up the temporary SSH key file
         rm /tmp/ssh_key
