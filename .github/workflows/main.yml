@@ -37,3 +37,4 @@ jobs:
       run: | 
         rsync -avz --exclude '.git*' ./ dandelion@192.168.86.30:/home/dandelion/projects/htpyx
         ssh dandelion@192.168.86.30 "cd /home/dandelion/projects/htpyx && ./deploy_script.sh"
+        echo "finished"
