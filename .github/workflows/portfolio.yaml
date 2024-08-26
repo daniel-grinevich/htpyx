@@ -23,15 +23,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Set up SSH for Raspberry Pi
-      run: | 
-        mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_MY_MAC_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H 192.168.86.30 >> ~/.ssh/known_hosts
-
     - name: Deploy to Raspberry Pi
       if: success()
-      run: | 
-        rsync -avz --exclude '.git*' ./ dandelion@192.168.86.30:/home/dandelion/projects/htpyx/
-        ssh dandelion@192.168.86.30 "cd /home/dandelion/projects/htpyx && ./deploy_script.sh"
+      run: |
+        rsync -avz -e "ssh -i <(echo '${{ secrets.SSH_MY_MAC_KEY }}')" --exclude '.git*' ./ dandelion@192.168.86.30:/home/dandelion/projects/htpyx/
+        ssh -i <(echo '${{ secrets.SSH_MY_MAC_KEY }}') dandelion@192.168.86.30 "cd /home/dandelion/projects/htpyx && ./deploy_script.sh"
